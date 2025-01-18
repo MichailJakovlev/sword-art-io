@@ -1,0 +1,288 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\ui\\uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\ui\\uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|c:\\users\\dokto\\unity projects\\ygtemplate\\assets\\native\\scripts\\ui\\uiswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\ui\\uiswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\leaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\localization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\localization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\installers\\menuinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\installers\\menuinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\ui\\leaderboardcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\ui\\leaderboardcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\rategame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\rategame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\installers\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\installers\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\interfaces\\iauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\interfaces\\iauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\readygameapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\readygameapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\states\\audiostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\states\\audiostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\states\\scenestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\states\\scenestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\interfaces\\ileaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\interfaces\\ileaderboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|C:\\Users\\dokto\\Unity Projects\\YGTemplate\\assets\\native\\scripts\\yandex\\fullscreenad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC67896E-9460-F075-2856-F8E732E2156E}|Assembly-CSharp.csproj|solutionrelative:assets\\native\\scripts\\yandex\\fullscreenad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EventBus.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\EventBus.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\EventBus.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\EventBus.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\EventBus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T15:22:47.041Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ILeaderboard.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Interfaces\\ILeaderboard.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Interfaces\\ILeaderboard.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Interfaces\\ILeaderboard.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Interfaces\\ILeaderboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T15:33:11.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthorization.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Interfaces\\IAuthorization.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Interfaces\\IAuthorization.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Interfaces\\IAuthorization.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Interfaces\\IAuthorization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T15:33:07.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIHandler.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\UIHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\UI\\UIHandler.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\UIHandler.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\UI\\UIHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:29:56.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameInstaller.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Installers\\GameInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Installers\\GameInstaller.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Installers\\GameInstaller.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Installers\\GameInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:01:34.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuInstaller.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Installers\\MenuInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Installers\\MenuInstaller.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Installers\\MenuInstaller.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Installers\\MenuInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:01:18.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LeaderboardContent.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\LeaderboardContent.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\UI\\LeaderboardContent.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\LeaderboardContent.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\UI\\LeaderboardContent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T16:31:39.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Leaderboard.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Leaderboard.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\Leaderboard.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Leaderboard.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\Leaderboard.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T11:14:29.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FullscreenAd.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\FullscreenAd.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\FullscreenAd.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\FullscreenAd.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\FullscreenAd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T15:10:42.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Authorization.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Authorization.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\Authorization.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Authorization.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\Authorization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T17:16:30.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Localization.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Localization.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\Localization.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\Localization.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\Localization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:23:05.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RateGame.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\RateGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\RateGame.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\RateGame.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\RateGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T10:30:35.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SceneState.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\States\\SceneState.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\States\\SceneState.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\States\\SceneState.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\States\\SceneState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T16:15:21.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UISwitcher.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\UISwitcher.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\UI\\UISwitcher.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\UI\\UISwitcher.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\UI\\UISwitcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T15:49:49.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AudioState.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\States\\AudioState.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\States\\AudioState.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\States\\AudioState.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\States\\AudioState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T15:38:26.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReadyGameAPI.cs",
+              "DocumentMoniker": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\ReadyGameAPI.cs",
+              "RelativeDocumentMoniker": "Assets\\Native\\Scripts\\Yandex\\ReadyGameAPI.cs",
+              "ToolTip": "C:\\Users\\dokto\\Unity Projects\\YGTemplate\\Assets\\Native\\Scripts\\Yandex\\ReadyGameAPI.cs",
+              "RelativeToolTip": "Assets\\Native\\Scripts\\Yandex\\ReadyGameAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T15:25:25.077Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
