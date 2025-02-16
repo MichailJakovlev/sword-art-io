@@ -3,7 +3,6 @@ using Zenject;
 
 public class UIHandler : MonoBehaviour
 {
-
     private ILeaderboard _leaderboard;
     private ISceneState _sceneState;
     private IFullscreenAd _fullscreenAd;
@@ -12,11 +11,12 @@ public class UIHandler : MonoBehaviour
     private IEventBus _eventBus;
     private IRateGame _rateGame;
     private IReadyGameAPI _readyGameAPI;
+    private ISwordPool _swordPool;
 
     public bool _isAuthed = false;
 
     [Inject]
-    private void Cunstruct(ILeaderboard uileaderbord, ISceneState sceneState, IFullscreenAd fullscreenAd, IRewardAd rewardAd, IAuthorization authorization, IEventBus eventBus, IRateGame rateGame, IReadyGameAPI readyGameAPI)
+    private void Construct(ILeaderboard uileaderbord, ISceneState sceneState, IFullscreenAd fullscreenAd, IRewardAd rewardAd, IAuthorization authorization, IEventBus eventBus, IRateGame rateGame, IReadyGameAPI readyGameAPI, ISwordPool swordPool)
     {
         _leaderboard = uileaderbord;
         _sceneState = sceneState;
@@ -26,6 +26,7 @@ public class UIHandler : MonoBehaviour
         _eventBus = eventBus;
         _rateGame = rateGame;
         _readyGameAPI = readyGameAPI;
+        _swordPool = swordPool;
     }
 
     private void OnEnable()
@@ -53,6 +54,7 @@ public class UIHandler : MonoBehaviour
     public void Auth() => _authorization.Authorization.Auth();
     public void StopGame() => _eventBus.EventBus.StopGameEvent();
     public void StartGame() => _eventBus?.EventBus.StartGameEvent();
+    public void CreateSword() => _swordPool.SwordPool.Create(); 
 
     public void OpenLeaderboard()
     {

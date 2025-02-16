@@ -1465,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64e614bfc5f12f4ca4fed7e1ac211c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isAuthed: 0
 --- !u!114 &5045759543370067699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,6 +1478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3061d31d81de70240a9548aa4b9c4427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _authRateGameButton: {fileID: 0}
+  _rateGameButton: {fileID: 0}
   _audioEnableButton: {fileID: 6399246576509266190}
   _audioDisableButton: {fileID: 63823101918464946}
 --- !u!1 &7998941313483009558

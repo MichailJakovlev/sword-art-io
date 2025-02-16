@@ -14,6 +14,10 @@ public class GameInstaller : MonoInstaller
     [SerializeField] private RateGame _rateGame;
     [SerializeField] private ReadyGameAPI _readyGameAPI;
     [SerializeField] private UISwitcher _uiSwitcher;
+    [SerializeField] private Player _player;
+    [SerializeField] private SwordPool _swordPool;
+    [SerializeField] private EnemyPool _enemyPool;
+    [SerializeField] private ItemPool _itemPool;
 
     public override void InstallBindings()
     {
@@ -44,10 +48,22 @@ public class GameInstaller : MonoInstaller
         RateGame rateGame = Container.InstantiatePrefabForComponent<RateGame>(_rateGame, _rateGame.transform.position, Quaternion.identity, null);
         Container.Bind<IRateGame>().To<RateGame>().FromInstance(rateGame).AsSingle();
 
+        EnemyPool enemyPool = Container.InstantiatePrefabForComponent<EnemyPool>(_enemyPool, _enemyPool.transform.position, Quaternion.identity, null);
+        Container.Bind<IEnemyPool>().To<EnemyPool>().FromInstance(enemyPool).AsSingle().NonLazy();
+
+        Player player = Container.InstantiatePrefabForComponent<Player>(_player, _player.transform.position, Quaternion.identity, null);
+        Container.Bind<IPlayer>().To<Player>().FromInstance(player).AsSingle().NonLazy();
+
+        SwordPool swordPool = Container.InstantiatePrefabForComponent<SwordPool>(_swordPool, transform.position, Quaternion.identity, player.transform);
+        Container.Bind<ISwordPool>().To<SwordPool>().FromInstance(swordPool).AsTransient().NonLazy();
+
+        ItemPool itemPool = Container.InstantiatePrefabForComponent<ItemPool>(_itemPool, transform.position, Quaternion.identity, null);
+        Container.Bind<IItemPool>().To<ItemPool>().FromInstance(itemPool).AsSingle().NonLazy();
+
         ReadyGameAPI readyGameAPI = Container.InstantiatePrefabForComponent<ReadyGameAPI>(_readyGameAPI, _readyGameAPI.transform.position, Quaternion.identity, null);
         Container.Bind<IReadyGameAPI>().To<ReadyGameAPI>().FromInstance(readyGameAPI).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
-    }
+    }   
 }
 
