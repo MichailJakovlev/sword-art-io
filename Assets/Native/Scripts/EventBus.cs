@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EventBus : MonoBehaviour , IEventBus
+public class EventBus : MonoBehaviour, IEventBus
 {
     private IEventBus _eventBus;
     EventBus IEventBus.EventBus => this;

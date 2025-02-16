@@ -1,4 +1,4 @@
-public interface IEventBus 
+public interface IEventBus
 {
    EventBus EventBus { get; }
 }

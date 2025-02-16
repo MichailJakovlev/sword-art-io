@@ -535,7 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 9139e8d0efbc7d142bbfb19f3367740f, type: 2}
   _monoInstallers:
   - {fileID: 1969667969}
   _installerPrefabs: []
@@ -593,6 +594,7 @@ MonoBehaviour:
   _rateGame: {fileID: 2650456539451266974, guid: 4945d9658005c9d478c189f55b1a8c95, type: 3}
   _readyGameAPI: {fileID: 3602667140450574609, guid: c31d947b93fc4724d83ee88624219dcb, type: 3}
   _uiSwitcher: {fileID: 2505061467916088747, guid: 0c1e0f8c4ab151d47b99438b17e27ea5, type: 3}
+  _caseOpener: {fileID: 3411852101581125144, guid: e17c6f493c6a3c64ea9c35836893412c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

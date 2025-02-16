@@ -28,7 +28,7 @@ public class UISwitcher : MonoBehaviour
 
     public void LeaderboardSwitch(bool leaderboardSwitch)
     {
-        
+
         if (leaderboardSwitch)
         {
             _leaderboard.GameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -44,7 +44,7 @@ public class UISwitcher : MonoBehaviour
         _audioState.AudioState.AudioSwitch(audioSwitch);
     }
 
-    public void AudioButtonSwitch() 
+    public void AudioButtonSwitch()
     {
         if (PlayerPrefs.GetString("Audio") == "Enable")
         {

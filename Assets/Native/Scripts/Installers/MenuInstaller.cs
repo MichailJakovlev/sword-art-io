@@ -14,9 +14,10 @@ public class MenuInstaller : MonoInstaller
     [SerializeField] private RateGame _rateGame;
     [SerializeField] private ReadyGameAPI _readyGameAPI;
     [SerializeField] private UISwitcher _uiSwitcher;
-    
+    [SerializeField] private CaseOpener _caseOpener;
+
     public override void InstallBindings()
-    { 
+    {
         EventBus eventBus = Container.InstantiatePrefabForComponent<EventBus>(_eventBus, _eventBus.transform.position, Quaternion.identity, null);
         Container.Bind<IEventBus>().To<EventBus>().FromInstance(eventBus).AsSingle();
 
@@ -34,7 +35,7 @@ public class MenuInstaller : MonoInstaller
 
         Leaderboard leaderboard = Container.InstantiatePrefabForComponent<Leaderboard>(_leaderboard, _leaderboard.transform.position, Quaternion.identity, null);
         Container.Bind<ILeaderboard>().To<Leaderboard>().FromInstance(leaderboard).AsSingle();
-   
+
         RewardAd rewardAd = Container.InstantiatePrefabForComponent<RewardAd>(_rewardAd, _rewardAd.transform.position, Quaternion.identity, null);
         Container.Bind<IRewardAd>().To<RewardAd>().FromInstance(rewardAd).AsSingle();
 
@@ -46,6 +47,9 @@ public class MenuInstaller : MonoInstaller
 
         ReadyGameAPI readyGameAPI = Container.InstantiatePrefabForComponent<ReadyGameAPI>(_readyGameAPI, _readyGameAPI.transform.position, Quaternion.identity, null);
         Container.Bind<IReadyGameAPI>().To<ReadyGameAPI>().FromInstance(readyGameAPI).AsSingle();
+
+        CaseOpener caseOpener = Container.InstantiatePrefabForComponent<CaseOpener>(_caseOpener, _caseOpener.transform.position, Quaternion.identity, null);
+        Container.Bind<ICaseOpener>().To<CaseOpener>().FromInstance(caseOpener).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
     }

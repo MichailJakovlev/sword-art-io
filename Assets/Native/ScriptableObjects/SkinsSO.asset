@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32aa592ac3914bd428c7cfdb88173df9, type: 3}
+  m_Name: SkinsSO
+  m_EditorClassIdentifier: 
+  skinInfo:
+  - name: 10
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -5545985139521885630, guid: ff1a327fb5f5ff74ead265ed274e7bf5, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 3
+  - name: 2
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 7843401330703262900, guid: 3a63b66a625fba64fbecca30cc67a2f2, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 0
+  - name: 1
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -2849528392580670858, guid: 0a8fd8b68e1b74e43939654bbc6f9913, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 0
+  - name: 0
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -1493412541446861637, guid: a06e675b124a68944a23780ad96d89c0, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 0
+  - name: 3
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -943040021717325838, guid: 7d79efef07fc5414bbd84b596023ca05, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 1
+  - name: 4
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -8164011061228261390, guid: 7633f14abe2159b46a478f5658fb6dcc, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 2
+  - name: 5
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 6458334188750091412, guid: 6bebe62090f410149897d4e4b9bf5f4d, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 2
+  - name: 6
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -2046741663497236812, guid: 893ae33d9dc4faa458c5212218618afa, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 1
+  - name: 7
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -4890898182926851412, guid: 84e0fc2bcf6a8894aadce9703372bcd3, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 3
+  - name: 8
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 659456908946057110, guid: b2e0fa940e55fe8419e93a151c869364, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 2
+  - name: 9
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 1224427232087285218, guid: dbdc34d9f7abcb549ac48c153f99b5fd, type: 3}
+    prefabSkin: {fileID: 0}
+    skinsRarity: 1
