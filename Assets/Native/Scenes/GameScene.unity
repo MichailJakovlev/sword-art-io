@@ -160,6 +160,10 @@ MonoBehaviour:
   _rateGame: {fileID: 2650456539451266974, guid: 4945d9658005c9d478c189f55b1a8c95, type: 3}
   _readyGameAPI: {fileID: 3602667140450574609, guid: c31d947b93fc4724d83ee88624219dcb, type: 3}
   _uiSwitcher: {fileID: 5045759543370067699, guid: c014a244ba742d041a4815664aeea188, type: 3}
+  _player: {fileID: 7280996843658001127, guid: 2b3d2539b06e289499a9f21ed64d91ef, type: 3}
+  _swordPool: {fileID: 2658892371401678200, guid: 5f155903f10945842a94cc23ba037c17, type: 3}
+  _enemyPool: {fileID: 8780095010535226738, guid: 786e96eb445adb143919701dca9dd82a, type: 3}
+  _itemPool: {fileID: 4604031084050353066, guid: 5baeae814a46cfb49a963b88b4c522d4, type: 3}
 --- !u!114 &1120068248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +325,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -354,7 +358,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -419,6 +423,7 @@ GameObject:
   - component: {fileID: 2016285104}
   - component: {fileID: 2016285103}
   - component: {fileID: 2016285106}
+  - component: {fileID: 2016285107}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -468,8 +473,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -493,8 +498,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016285102}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,11 +549,23 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2016285107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016285102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a25fa6480011b488e65abded78a044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2016285105}
   - {fileID: 1881123267}
+  - {fileID: 2016285105}
   - {fileID: 1564991711}
   - {fileID: 1120068249}

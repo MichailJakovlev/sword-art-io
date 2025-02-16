@@ -3,7 +3,6 @@ using Zenject;
 
 public class UIHandler : MonoBehaviour
 {
-
     private ILeaderboard _leaderboard;
     private ISceneState _sceneState;
     private IFullscreenAd _fullscreenAd;
@@ -12,12 +11,11 @@ public class UIHandler : MonoBehaviour
     private IEventBus _eventBus;
     private IRateGame _rateGame;
     private IReadyGameAPI _readyGameAPI;
-    private ICaseOpener _caseOpener;
 
     public bool _isAuthed = false;
 
     [Inject]
-    private void Cunstruct(ILeaderboard uileaderbord, ISceneState sceneState, IFullscreenAd fullscreenAd, IRewardAd rewardAd, IAuthorization authorization, IEventBus eventBus, IRateGame rateGame, IReadyGameAPI readyGameAPI, ICaseOpener caseOpener)
+    private void Cunstruct(ILeaderboard uileaderbord, ISceneState sceneState, IFullscreenAd fullscreenAd, IRewardAd rewardAd, IAuthorization authorization, IEventBus eventBus, IRateGame rateGame, IReadyGameAPI readyGameAPI)
     {
         _leaderboard = uileaderbord;
         _sceneState = sceneState;
@@ -27,7 +25,7 @@ public class UIHandler : MonoBehaviour
         _eventBus = eventBus;
         _rateGame = rateGame;
         _readyGameAPI = readyGameAPI;
-        _caseOpener = caseOpener;
+
     }
 
     private void OnEnable()
@@ -78,9 +76,5 @@ public class UIHandler : MonoBehaviour
         {
             _authorization.GameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-    }
-    public void OpenCase()
-    {
-        _caseOpener.OpenCase();
     }
 }

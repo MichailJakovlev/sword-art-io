@@ -28,7 +28,6 @@ public class UISwitcher : MonoBehaviour
 
     public void LeaderboardSwitch(bool leaderboardSwitch)
     {
-
         if (leaderboardSwitch)
         {
             _leaderboard.GameObject.transform.GetChild(0).gameObject.SetActive(true);
