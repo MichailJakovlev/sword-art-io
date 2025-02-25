@@ -16,7 +16,6 @@ public class ItemPool : MonoBehaviour, IItemPool
     private Item[] itemArray;
     private HealItem[] healItemArray;
 
-
     public void Start()
     {
         itemArray = new Item[_itemCount];
@@ -28,21 +27,22 @@ public class ItemPool : MonoBehaviour, IItemPool
     {
         for(int i = 0; i < _itemCount; i++)
         {
-            itemArray[i] = Instantiate(_item, PositionChanger(), Quaternion.identity, gameObject.transform);
+            itemArray[i] = Instantiate(_item, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
         }
 
         for (int i = 0; i < _healItemCount; i++)
         {
-            healItemArray[i] = Instantiate(_healItem, PositionChanger(), Quaternion.identity, gameObject.transform);
+            healItemArray[i] = Instantiate(_healItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
         }
     }
 
-    public Vector2 PositionChanger()
+    public Vector3 PositionChanger()
     {
-        Vector2 itemPosition;
+        Vector3 itemPosition;
 
         itemPosition.x = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeX);
-        itemPosition.y = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeY);
+        itemPosition.y = 0.5f;
+        itemPosition.z = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeY);
 
         return itemPosition;
     }
@@ -52,3 +52,4 @@ public class ItemPool : MonoBehaviour, IItemPool
         item.transform.position = PositionChanger();
     }
 }
+ 

@@ -10,9 +10,9 @@ public class HealItem : MonoBehaviour
         _itemPool = GetComponentInParent<ItemPool>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.layerOverridePriority == 0)
+        if (collision.collider.layerOverridePriority == 2)
         {
             _itemPool.Realize(gameObject);
             collision.gameObject.GetComponentInChildren<Health>().GetHeal(_healPointValue);

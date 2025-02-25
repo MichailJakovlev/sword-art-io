@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item: {fileID: 8642394094032170230, guid: 14d175c37d60d9d4693742324b16b001, type: 3}
   _healItem: {fileID: -33199502522897960, guid: d1ec4630b09b1294fa81fe9dfa837a65, type: 3}
-  _itemCount: 20
-  _healItemCount: 7
-  _spawnAreaSizeX: 15
-  _spawnAreaSizeY: 5
+  _itemCount: 10
+  _healItemCount: 5
+  _spawnAreaSizeX: 10
+  _spawnAreaSizeY: 10

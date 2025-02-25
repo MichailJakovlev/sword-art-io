@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     private EnemyPool _enemyPool;
     private Animations _animations;
 
-    private void Start()
+    private void Awake()
     {
         _maxHealthValue = _healthValue;
         _animations = GetComponent<Animations>();
@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            _animations.Move(true);
+            _animations.Hit();
         }  
     }
 

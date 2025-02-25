@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -12,6 +13,7 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
     [SerializeField] private int _spawnAreaSizeX;
     [SerializeField] private int _spawnAreaSizeY;
 
+    private Queue<GameObject> _respawnQueue;
     private GameObject[] enemyArray;
     private SwordPool[] swordPullArray;
     private bool _isTimerNotActive = true;
@@ -20,6 +22,7 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
     {
         enemyArray = new GameObject[_enemyCount];
         swordPullArray = new SwordPool[_enemyCount];
+        _respawnQueue = new Queue<GameObject>();
 
         Create();
     }
@@ -33,12 +36,13 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
         }
     }
 
-    public Vector2 PositionChanger()
+    public Vector3 PositionChanger()
     {
-        Vector2 enemyPosition;
+        Vector3 enemyPosition;
 
         enemyPosition.x = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeX);
-        enemyPosition.y = Random.Range(_spawnAreaSizeY * -1, _spawnAreaSizeY);
+        enemyPosition.z = Random.Range(_spawnAreaSizeY * -1, _spawnAreaSizeY);
+        enemyPosition.y = 0;
 
         return enemyPosition;
     }
@@ -48,24 +52,26 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
         enemy.GetComponent<Health>().GetHeal(10);
         enemy.transform.position = PositionChanger();
         enemy.SetActive(true);
-        enemy.GetComponent<Animations>().Move(false);
+        enemy.GetComponent<Animations>().Move();
         enemy.GetComponentInChildren<SwordPool>().Get();
     }
 
     public void Realize(GameObject enemy)
     {
         enemy.SetActive(false);
-        Get(enemy);
-        // if (_isTimerNotActive)
-        // {
-        //   _isTimerNotActive = false;
-        // StartCoroutine(Timer(enemy));
-        // }
+        _respawnQueue.Enqueue(enemy);
+
+        if (_isTimerNotActive)
+        {
+            _isTimerNotActive = false;
+            StartCoroutine(Timer());
+        }
     }
     
-    private IEnumerator Timer(GameObject enemy)
+    private IEnumerator Timer()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3f);
+        GameObject enemy = _respawnQueue.Dequeue();
         Get(enemy);
         _isTimerNotActive = true;
     }
