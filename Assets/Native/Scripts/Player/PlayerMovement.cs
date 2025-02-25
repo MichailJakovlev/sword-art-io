@@ -6,43 +6,38 @@ public class PlayerMovement : MonoBehaviour
     
     private Animations _animations;
     private SpriteRenderer _spriteRenderer;
-    private bool _isNotCoursorEntered = true;
+    private float _horizontal, _vertical;
+    private Vector3 targetPosition;
 
     private void Start()
     {
         _animations = GetComponent<Animations>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        _animations.Move(false);
+        _spriteRenderer.transform.rotation = new Quaternion(45, 0, 0, 90);
+        
     }
 
     void Update()
     {
-        MoveToCursor();
-        _spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
+        _horizontal = Input.GetAxisRaw("Horizontal");
+        _vertical = Input.GetAxisRaw("Vertical");
+        MovePlayer();
     }
 
-    void MoveToCursor()
+    void MovePlayer()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+        targetPosition = new Vector3(_horizontal, 0, _vertical).normalized;
 
-        if (_isNotCoursorEntered)
+        if (targetPosition.magnitude != 0)
         {
-            Vector2 targetPosition = new(mousePosition.x, mousePosition.y);
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            _spriteRenderer.flipX = _horizontal < 0;
+            _animations.Move();
         }
-    }
+        else
+        {   
+            _animations.Idle();
+        }
 
-    private void OnMouseEnter()
-    {
-        _isNotCoursorEntered = false;
-        transform.position = transform.position;
-        _animations.Idle();
-    }
-
-    private void OnMouseExit()
-    {
-        _isNotCoursorEntered = true;
-        _animations.Move(false);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + targetPosition, moveSpeed * Time.deltaTime);
     }
 }

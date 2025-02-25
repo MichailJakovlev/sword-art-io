@@ -8,7 +8,8 @@ public class SwordPool : MonoBehaviour, ISwordPool
 
     [SerializeField] private GameObject _sword;
     [SerializeField] private int _swordCount;
-
+    
+    private Vector3 _axis;
     private  GameObject[] swordArray;
     private int _iterator = 1;
 
@@ -32,9 +33,12 @@ public class SwordPool : MonoBehaviour, ISwordPool
     {
         for (int i = 0; i < value; i++)
         {
-            int _rotateValue = 360 / value * i;
-            swordArray[i].gameObject.transform.rotation = Quaternion.AngleAxis(_rotateValue, Vector3.back);
-        }  
+            float _rotateValue = 360 / value * i;
+            _axis.z = _rotateValue;
+
+            swordArray[i].gameObject.transform.rotation = new Quaternion(0,0,0,0);
+            swordArray[i].gameObject.transform.Rotate(_axis);
+        }
     }
 
     public void Get()
@@ -49,6 +53,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
             {
                 swordArray[i].gameObject.SetActive(false);
             }
+
             PositionChanger(_iterator);
             _iterator++;
         }

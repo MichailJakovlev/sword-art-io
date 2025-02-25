@@ -5,16 +5,26 @@ public class Animations : MonoBehaviour
 {
     private Animator _animator;
     private EnemyPool _enemyPool;
+    private EnemyMovement _enemyMovement;
+    private Collider _collider;
 
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
         _enemyPool = GetComponentInParent<EnemyPool>();
+        _enemyMovement = GetComponent<EnemyMovement>();
+        _collider = GetComponent<Collider>();
     }
 
-    public void Move(bool hit)
+    public void Move()
     {
-        StartCoroutine(Animate(hit));
+        _animator.Play("Move");
+    }
+
+    public void Hit()
+    {
+        StopAllCoroutines();
+        StartCoroutine(HitAnim());
     }
 
     public void Idle()
@@ -24,41 +34,32 @@ public class Animations : MonoBehaviour
 
     public void Death()
     {
-        StopCoroutine(Animate(false));
-        StartCoroutine(Dying());
+        StopAllCoroutines();
+        StartCoroutine(DeathAnim());
     }
 
-    private IEnumerator Dying()
+    private IEnumerator DeathAnim()
     {
+        _collider.enabled = false;
+        _enemyMovement.enabled = false;
         _animator.Play("Death");
         yield return new WaitForSeconds(0.6f);
         _enemyPool.Realize(gameObject);
+        _enemyMovement.enabled = true;
+        _collider.enabled = true;
     }
 
-    private bool GetHit(bool hit)
+    private IEnumerator HitAnim()
     {
-        if(hit)
-        {
-            return true;
-        }
-        return false;
+        _animator.Play("Hit");
+        yield return new WaitForSeconds(0.25f);
+        _animator.Play("Move");
     }
 
-    private IEnumerator Animate(bool hit)
+    private IEnumerator IdleAnim()
     {
-        while(true)
-        {
-            _animator.Play("Move");
-
-            yield return new WaitUntil(() => GetHit(hit));
-            _animator.Play("Hit");
-            hit = false;
-
-            yield return new WaitForSeconds(0.05f);
-            _animator.Play("Move");
-
-            yield return new WaitUntil(() => GetHit(hit));
-        }
+        _animator.Play("Idle");
+        yield return new WaitUntil(() => _animator.GetBool("IsMove"));
     }
 }
 
