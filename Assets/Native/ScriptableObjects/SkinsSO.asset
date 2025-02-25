@@ -27,12 +27,12 @@ MonoBehaviour:
     skinsRarity: 0
   - name: 1
     isDefault: 0
-    isAchievementSkin: 0
+    isAchievementSkin: 1
     sprite: {fileID: -3151636426878492923, guid: 3294a672c9469de42bc24cc970ce97f3, type: 3}
     prefabSkin: {fileID: 0}
     skinsRarity: 0
   - name: 0
-    isDefault: 0
+    isDefault: 1
     isAchievementSkin: 0
     sprite: {fileID: -1502304425598103624, guid: ffa1bd96c39db134ea273ba01d982bd8, type: 3}
     prefabSkin: {fileID: 0}

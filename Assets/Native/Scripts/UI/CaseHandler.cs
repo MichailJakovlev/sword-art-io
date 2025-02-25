@@ -4,6 +4,8 @@ using Zenject;
 public class CaseHandler : MonoBehaviour
 {
     private ICaseOpener _caseOpener;
+    [SerializeField] private CanvasGroup _openCaseArea;
+
 
 
     [Inject]
@@ -14,5 +16,10 @@ public class CaseHandler : MonoBehaviour
     public void OpenCase()
     {
         _caseOpener.OpenCase();
+    }
+    public void SetAlpha()
+    {
+        _openCaseArea = GameObject.Find("Open Case Area").GetComponent<CanvasGroup>();
+        _openCaseArea.alpha = 1;
     }
 }
