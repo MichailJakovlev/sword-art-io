@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "sword-art-io.sln"
+    "dotnet.defaultSolution": "sword-art-io.sln",
+    "dotnet.preferCSharpExtension": true
 }

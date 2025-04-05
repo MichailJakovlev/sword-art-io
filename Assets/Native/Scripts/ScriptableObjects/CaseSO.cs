@@ -9,5 +9,4 @@ public class CaseSO : ScriptableObject
     public float spinMaxSpeed = 3000f;
     public float spinSmooth = 0.5f;
     public float spinDuration = 10f;
-    public GameObject itemPrefab;
 }

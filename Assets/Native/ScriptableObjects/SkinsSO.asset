@@ -79,3 +79,4 @@ MonoBehaviour:
     sprite: {fileID: 2844132894536031813, guid: 4117d67353f72b846b7d160ac0e85990, type: 3}
     prefabSkin: {fileID: 0}
     skinsRarity: 1
+  skinCardPrefab: {fileID: 6450527248555726010, guid: db639d7fa6fedda43ae779b7643da4fb, type: 3}

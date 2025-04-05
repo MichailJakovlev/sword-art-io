@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3823825500157178721}
   - component: {fileID: 6266528844843614714}
   m_Layer: 5
-  m_Name: BackgroundRarity
+  m_Name: SkinCardPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

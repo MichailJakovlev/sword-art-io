@@ -15,7 +15,7 @@ public class CaseHandler : MonoBehaviour
     }
     public void OpenCase()
     {
-        _caseOpener.OpenCase();
+        _caseOpener.CaseOpener.OpenCase();
     }
     public void SetAlpha()
     {

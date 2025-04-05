@@ -2,25 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 public class CaseOpener : MonoBehaviour, ICaseOpener
 {
-    private Vector2 targetPosition;
+    CaseOpener ICaseOpener.CaseOpener => this;
     private GameConfig _gameConfig;
+    private ISaveData _saveData;
+
+    private Vector2 targetPosition;
     private RectTransform _grid;
     private Image _skinImage;
     private Image _backgroundRarity;
     private List<SkinNames> caseItems;
     [SerializeField] private CaseHandler _caseHandler;
 
+    private bool firstEnabledFlag = false;
+
     [Inject]
-    public void Construct(GameConfig gameConfig)
+    private void Construct(GameConfig gameConfig, ISaveData saveData)
     {
         _gameConfig = gameConfig;
+        _saveData = saveData;
     }
 
     private List<SkinNames> FillArray()
@@ -39,7 +44,6 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
 
     private List<SkinNames> ShuffleItems<SkinNames>(List<SkinNames> caseItems)
     {
-
         List<SkinNames> copy = caseItems.ToList();
         var rng = new System.Random();
         int n = copy.Count;
@@ -56,25 +60,37 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     private IEnumerator InstantiateCaseItems(List<SkinNames> caseItems)
     {
         yield return new WaitForSeconds(1f);
-        // string list = "";
-        // int num = 0;
         for (int i = 0; i < caseItems.Count; i++)
         {
-            GameObject newElement = Instantiate(_gameConfig.CaseSO.itemPrefab, _grid);
+            GameObject newElement;
+            if (firstEnabledFlag == false)
+            {
+                newElement = Instantiate(_gameConfig.SkinsSO.skinCardPrefab, _grid);
+            }
+            else
+            {
+                newElement = _grid.GetChild(i).gameObject;
+                newElement.SetActive(true);
+            }
 
             _backgroundRarity = newElement.transform.GetComponent<Image>();
             _skinImage = newElement.transform.GetChild(0).GetComponent<Image>();
 
             SkinInfo skin = _gameConfig.SkinsSO.skinInfo.Find(skin => caseItems[i] == skin.name);
-            RarityInfo skinRarity = _gameConfig.RaritySO.rarityInfo.Find(rarity => skin.skinsRarity == rarity.skinsRarity);
+            RarityInfo skinRarity =
+                _gameConfig.RaritySO.rarityInfo.Find(rarity => skin.skinsRarity == rarity.skinsRarity);
 
             _backgroundRarity.color = skinRarity.color;
             _skinImage.sprite = skin.sprite;
-            // num++;
-            // list += $"{caseItems[i]} ";
         }
-        // Debug.Log($"[{num}] " + $"[{list}]");
-        Debug.Log(caseItems[^4]);
+
+        Debug.Log(caseItems[^4]); // log
+        string caseItem = caseItems[^4].ToString();
+        _saveData.SaveData.AddSkin(caseItem, true, false);
+        if (firstEnabledFlag == false)
+        {
+            firstEnabledFlag = true;
+        }
         yield return null;
     }
 
@@ -91,44 +107,45 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
 
         var endPosOfItem = (length - 3) * (xGridCellSize + xGridSpacing);
 
-        targetPosition = new(UnityEngine.Random.Range((endPosOfItem - xGridCellSize - xGridSpacing) * -1, (endPosOfItem - xGridSpacing) * -1) + _grid.rect.width / 2, 0);
+        targetPosition =
+            new(
+                UnityEngine.Random.Range((endPosOfItem - xGridCellSize - xGridSpacing) * -1,
+                    (endPosOfItem - xGridSpacing) * -1) + _grid.rect.width / 2, 0);
 
 
         while (elapsed < _gameConfig.CaseSO.spinDuration)
         {
             elapsed += Time.deltaTime;
 
-            _grid.anchoredPosition = Vector2.SmoothDamp(_grid.anchoredPosition, targetPosition, ref velocity, elapsed * _gameConfig.CaseSO.spinSmooth, _gameConfig.CaseSO.spinMaxSpeed, Time.deltaTime * _gameConfig.CaseSO.spinSpeed);
+            _grid.anchoredPosition = Vector2.SmoothDamp(_grid.anchoredPosition, targetPosition, ref velocity,
+                elapsed * _gameConfig.CaseSO.spinSmooth, _gameConfig.CaseSO.spinMaxSpeed,
+                Time.deltaTime * _gameConfig.CaseSO.spinSpeed);
 
             if (velocity == Vector2.zero)
             {
                 elapsed = _gameConfig.CaseSO.spinDuration;
             }
+
             yield return null;
         }
-        _grid.anchoredPosition = targetPosition;
-    }
 
-    private void RollSkins()
-    {
-        StartCoroutine(SpinAnimation());
+        _grid.anchoredPosition = targetPosition;
     }
 
     private void Reset()
     {
         _grid = (RectTransform)GameObject.Find("Grid").transform;
         _grid.anchoredPosition = new Vector2(0, 0);
-        foreach (Transform child in _grid.transform)
-        {
-            Destroy(child.gameObject);
-        }
     }
-
+    
     public void OpenCase()
     {
         Reset();
         StartCoroutine(InstantiateCaseItems(ShuffleItems(FillArray())));
-        RollSkins();
+        StartCoroutine(SpinAnimation());
+        foreach (Transform child in _grid.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
-
 }

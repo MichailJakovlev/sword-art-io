@@ -15,3 +15,4 @@ MonoBehaviour:
   _skinSO: {fileID: 11400000, guid: d40d224377feb8940be729944bc2da38, type: 2}
   _caseSO: {fileID: 11400000, guid: d72e9b6573c6a004f9c700d2fff7b44d, type: 2}
   _raritySO: {fileID: 11400000, guid: 72ab2ba06197d334491e8f0aba5f7cd2, type: 2}
+  _inventorySO: {fileID: 11400000, guid: 5e1d850ebf91ca24bac6a603b7074eba, type: 2}

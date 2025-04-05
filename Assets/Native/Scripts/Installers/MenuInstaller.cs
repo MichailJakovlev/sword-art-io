@@ -16,8 +16,14 @@ public class MenuInstaller : MonoInstaller
     [SerializeField] private UISwitcher _uiSwitcher;
     [SerializeField] private CaseOpener _caseOpener;
 
+    [SerializeField] private SaveData _saveData;
+    [SerializeField] private Inventory _inventory;
+
     public override void InstallBindings()
     {
+        SaveData saveData = Container.InstantiatePrefabForComponent<SaveData>(_saveData, _saveData.transform.position, Quaternion.identity, null);
+        Container.Bind<ISaveData>().To<SaveData>().FromInstance(saveData).AsSingle();
+        
         EventBus eventBus = Container.InstantiatePrefabForComponent<EventBus>(_eventBus, _eventBus.transform.position, Quaternion.identity, null);
         Container.Bind<IEventBus>().To<EventBus>().FromInstance(eventBus).AsSingle();
 
@@ -47,9 +53,12 @@ public class MenuInstaller : MonoInstaller
 
         ReadyGameAPI readyGameAPI = Container.InstantiatePrefabForComponent<ReadyGameAPI>(_readyGameAPI, _readyGameAPI.transform.position, Quaternion.identity, null);
         Container.Bind<IReadyGameAPI>().To<ReadyGameAPI>().FromInstance(readyGameAPI).AsSingle();
-
+        
         CaseOpener caseOpener = Container.InstantiatePrefabForComponent<CaseOpener>(_caseOpener, _caseOpener.transform.position, Quaternion.identity, null);
         Container.Bind<ICaseOpener>().To<CaseOpener>().FromInstance(caseOpener).AsSingle();
+        
+        Inventory inventory = Container.InstantiatePrefabForComponent<Inventory>(_inventory, _inventory.transform.position, Quaternion.identity, null);
+        Container.Bind<IInventory>().To<Inventory>().FromInstance(inventory).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
     }

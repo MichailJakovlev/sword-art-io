@@ -595,6 +595,8 @@ MonoBehaviour:
   _readyGameAPI: {fileID: 3602667140450574609, guid: c31d947b93fc4724d83ee88624219dcb, type: 3}
   _uiSwitcher: {fileID: 2505061467916088747, guid: 0c1e0f8c4ab151d47b99438b17e27ea5, type: 3}
   _caseOpener: {fileID: 3411852101581125144, guid: e17c6f493c6a3c64ea9c35836893412c, type: 3}
+  _saveData: {fileID: 1871242885905066129, guid: 428bb8b39b8f7774194811e95af42f03, type: 3}
+  _inventory: {fileID: -2869870549793489877, guid: 1f03f24dd55a69a4fb821c935f6fa69e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
