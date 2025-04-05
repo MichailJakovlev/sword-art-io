@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class HealItem : MonoBehaviour
+public class HealItem : MonoBehaviour, IItem
 {
+    GameObject IItem.GameObject => this.gameObject;
     private ItemPool _itemPool;
     [SerializeField] private int _healPointValue;
 
@@ -10,12 +11,17 @@ public class HealItem : MonoBehaviour
         _itemPool = GetComponentInParent<ItemPool>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+   public  void OnCollisionEnter(Collision collision)
+   {
+       if (collision.collider.layerOverridePriority == 2)
+       {
+           Effect(collision.gameObject);
+       }
+   }
+
+    public void Effect(GameObject entity)
     {
-        if (collision.collider.layerOverridePriority == 2)
-        {
-            _itemPool.Realize(gameObject);
-            collision.gameObject.GetComponentInChildren<Health>().GetHeal(_healPointValue);
-        }
+        _itemPool.Realize(gameObject);
+        entity.GetComponentInChildren<Health>().GetHeal(_healPointValue);
     }
 }

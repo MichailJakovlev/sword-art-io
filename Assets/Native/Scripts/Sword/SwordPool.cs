@@ -1,9 +1,7 @@
 using UnityEngine;
-using Zenject;
 
 public class SwordPool : MonoBehaviour, ISwordPool
 {
-    private ISwordPool _iSwordPool;
     SwordPool ISwordPool.SwordPool => this;
 
     [SerializeField] private GameObject _sword;
@@ -11,7 +9,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
     
     private Vector3 _axis;
     private  GameObject[] swordArray;
-    private int _iterator = 1;
+    public int _iterator = 1;
 
     void Awake()
     {
@@ -58,7 +56,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
             _iterator++;
         }
     }
-
+    
     public void Realize(GameObject sword) 
     {
         sword.SetActive(false);

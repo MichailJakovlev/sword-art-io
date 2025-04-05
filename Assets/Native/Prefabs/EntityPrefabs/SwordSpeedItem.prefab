@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5801536361157218006}
   - component: {fileID: 1498601385828120938}
-  - component: {fileID: 8642394094032170230}
+  - component: {fileID: -5939311638934407478}
   - component: {fileID: 4199348051697745048}
   - component: {fileID: 1855390114864301843}
   m_Layer: 0
-  m_Name: SwordPulsItem
+  m_Name: SwordSpeedItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.7735849, g: 0.2967662, b: 0.26637593, a: 1}
+  m_Color: {r: 0.2021627, g: 0.24280244, b: 0.7264151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8642394094032170230
+--- !u!114 &-5939311638934407478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8234849500756289232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e7e8cae6cc1e8489402a2aa076eaad, type: 3}
+  m_Script: {fileID: 11500000, guid: c9ba51edeab48da408724aaaed25d92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _swordRotate: {fileID: -6399922223792703519, guid: 5f155903f10945842a94cc23ba037c17, type: 3}
 --- !u!135 &4199348051697745048
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ SphereCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 4
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1

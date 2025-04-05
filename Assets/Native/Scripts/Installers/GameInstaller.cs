@@ -18,9 +18,12 @@ public class GameInstaller : MonoInstaller
     [SerializeField] private SwordPool _swordPool;
     [SerializeField] private EnemyPool _enemyPool;
     [SerializeField] private ItemPool _itemPool;
-
+    
     public override void InstallBindings()
-    {
+         {
+             Application.targetFrameRate = 60;
+             QualitySettings.vSyncCount = 0;
+             
         EventBus eventBus = Container.InstantiatePrefabForComponent<EventBus>(_eventBus, _eventBus.transform.position, Quaternion.identity, null);
         Container.Bind<IEventBus>().To<EventBus>().FromInstance(eventBus).AsSingle();
 
@@ -50,10 +53,10 @@ public class GameInstaller : MonoInstaller
 
         EnemyPool enemyPool = Container.InstantiatePrefabForComponent<EnemyPool>(_enemyPool, _enemyPool.transform.position, Quaternion.identity, null);
         Container.Bind<IEnemyPool>().To<EnemyPool>().FromInstance(enemyPool).AsSingle().NonLazy();
-
+        
         Player player = Container.InstantiatePrefabForComponent<Player>(_player, _player.transform.position, Quaternion.identity, null);
         Container.Bind<IPlayer>().To<Player>().FromInstance(player).AsSingle().NonLazy();
-
+        
         SwordPool swordPool = Container.InstantiatePrefabForComponent<SwordPool>(_swordPool, transform.position, Quaternion.identity, player.transform);
         Container.Bind<ISwordPool>().To<SwordPool>().FromInstance(swordPool).AsTransient().NonLazy();
 
@@ -64,6 +67,6 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IReadyGameAPI>().To<ReadyGameAPI>().FromInstance(readyGameAPI).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
-    }   
+    }    
 }
 

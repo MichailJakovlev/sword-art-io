@@ -1,32 +1,36 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
     private Animations _animations;
     private SpriteRenderer _spriteRenderer;
+    private NavMeshAgent _navMeshAgent;
+    public Vector3 _targetPosition;
+    public float _moveSpeed;
     
-
-    private Vector3 _targetPosition;
-
     private void Start()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _animations = GetComponent<Animations>();
-
         _spriteRenderer.transform.rotation = new Quaternion(45, 0, 0, 90);
-        _targetPosition = new(Random.Range(-10, 10), 0, Random.Range(-10, 10));
         _animations.Move();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent.updateRotation = false; 
+        _navMeshAgent.speed = _moveSpeed;
     }
-
-    void Update()
+    
+    void FixedUpdate()
     {
-        if (transform.position.x == _targetPosition.x && transform.position.z == _targetPosition.z)
-        {
-            _targetPosition = new(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        Vector3 lastPosition = transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _moveSpeed * Time.fixedDeltaTime);
+        
+        if (transform.position.x == _targetPosition.x && transform.position.z == _targetPosition.z || lastPosition.x == transform.position.x && lastPosition.z == transform.position.z)
+        { 
+            _targetPosition = new Vector3(Random.Range((GameData.X - 5) * -1, GameData.X - 5), 0, Random.Range((GameData.Z - 5) * -1, GameData.Z - 5));
         }
-
-        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, moveSpeed * Time.deltaTime);
-        _spriteRenderer.flipX = _targetPosition.x < transform.position.x;
+        
+        _spriteRenderer.flipX = _targetPosition.x < transform.position.x; 
     }
 }
+ 

@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 4005273279898533448, guid: a798d9796e4da704b85b8a15362006b5, type: 3}
   _swordPool: {fileID: 2658892371401678200, guid: 5f155903f10945842a94cc23ba037c17, type: 3}
-  _enemyCount: 2
-  _spawnAreaSizeX: 10
-  _spawnAreaSizeY: 10
+  _enemyLocator: {fileID: 1387335926417903754, guid: e4fc00847521f4f4998007a83271d2f6, type: 3}
+  enemyArray: []
+  swordPullArray: []
