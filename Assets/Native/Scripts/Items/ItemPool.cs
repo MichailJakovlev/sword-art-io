@@ -1,38 +1,44 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemPool : MonoBehaviour, IItemPool
 {
-    private IItemPool _iItemPool;
     ItemPool IItemPool.ItemPool => this;
 
-    [SerializeField] private Item _item;
+    [SerializeField] private SwordAddItem _swordAddItem;
     [SerializeField] private HealItem _healItem;
-    [SerializeField] private int _itemCount;
-    [SerializeField] private int _healItemCount;
-    [SerializeField] private int _spawnAreaSizeX;
-    [SerializeField] private int _spawnAreaSizeY;
+    [SerializeField] private MoveSpeedItem _moveSpeedItem;
+    [SerializeField] private SwordSpeedItem _swordSpeedItem;
+    
+    private IItem _item;
 
-    private Item[] itemArray;
-    private HealItem[] healItemArray;
+    public static IItem[] items;
 
     public void Start()
     {
-        itemArray = new Item[_itemCount];
-        healItemArray = new HealItem[_healItemCount];
+        items = new IItem[GameData.HealItemCount + GameData.SwordAddItemCount + GameData.SwordSpeedItemCount + GameData.MoveSpeedItemCount];
         Create();
     }
 
     public void Create()
     {
-        for(int i = 0; i < _itemCount; i++)
+        for(int i = 0; i < GameData.SwordAddItemCount; i++)
         {
-            itemArray[i] = Instantiate(_item, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
+            items[i] = Instantiate(_swordAddItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
         }
 
-        for (int i = 0; i < _healItemCount; i++)
+        for (int i = GameData.SwordAddItemCount; i < GameData.HealItemCount + GameData.SwordAddItemCount; i++)
         {
-            healItemArray[i] = Instantiate(_healItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
+            items[i] = Instantiate(_healItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
+        }
+
+        for (int i = GameData.HealItemCount + GameData.SwordAddItemCount; i < GameData.MoveSpeedItemCount + GameData.HealItemCount + GameData.SwordAddItemCount; i++)
+        {
+            items[i] = Instantiate(_moveSpeedItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
+        }
+
+        for (int i = GameData.MoveSpeedItemCount + GameData.HealItemCount + GameData.SwordAddItemCount; i < GameData.SwordSpeedItemCount + GameData.MoveSpeedItemCount + GameData.HealItemCount + GameData.SwordAddItemCount; i++)
+        {
+            items[i] = Instantiate(_swordSpeedItem, PositionChanger(), new Quaternion(45, 0, 0, 90), gameObject.transform);
         }
     }
 
@@ -40,9 +46,9 @@ public class ItemPool : MonoBehaviour, IItemPool
     {
         Vector3 itemPosition;
 
-        itemPosition.x = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeX);
+        itemPosition.x = Random.Range(GameData.X * -1, GameData.X);
         itemPosition.y = 0.5f;
-        itemPosition.z = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeY);
+        itemPosition.z = Random.Range(GameData.Z * -1, GameData.Z);
 
         return itemPosition;
     }
@@ -52,4 +58,4 @@ public class ItemPool : MonoBehaviour, IItemPool
         item.transform.position = PositionChanger();
     }
 }
- 
+    

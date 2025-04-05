@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 public class EnemyPool : MonoBehaviour, IEnemyPool
 {
@@ -9,27 +6,20 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
 
     [SerializeField] private GameObject _enemy;
     [SerializeField] private SwordPool _swordPool;
-    [SerializeField] private int _enemyCount;
-    [SerializeField] private int _spawnAreaSizeX;
-    [SerializeField] private int _spawnAreaSizeY;
-
-    private Queue<GameObject> _respawnQueue;
-    private GameObject[] enemyArray;
-    private SwordPool[] swordPullArray;
-    private bool _isTimerNotActive = true;
-
+    
+    public static GameObject[] enemyArray;
+    public static SwordPool[] swordPullArray;
+   
     void Start()
     {
-        enemyArray = new GameObject[_enemyCount];
-        swordPullArray = new SwordPool[_enemyCount];
-        _respawnQueue = new Queue<GameObject>();
-
+        enemyArray = new GameObject[GameData.EnemyAmount];
+        swordPullArray = new SwordPool[GameData.EnemyAmount];
         Create();
     }
 
     public void Create()
     {
-        for (int i = 0; i < _enemyCount; i++)
+        for (int i = 0; i < GameData.EnemyAmount; i++)
         {
             enemyArray[i] = Instantiate(_enemy, PositionChanger(), Quaternion.identity, gameObject.transform);
             swordPullArray[i] = Instantiate(_swordPool, enemyArray[i].transform.position, Quaternion.identity, enemyArray[i].transform);
@@ -40,8 +30,8 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
     {
         Vector3 enemyPosition;
 
-        enemyPosition.x = Random.Range(_spawnAreaSizeX * -1, _spawnAreaSizeX);
-        enemyPosition.z = Random.Range(_spawnAreaSizeY * -1, _spawnAreaSizeY);
+        enemyPosition.x = Random.Range(GameData.X * -1, GameData.X);
+        enemyPosition.z = Random.Range(GameData.Z * -1, GameData.Z);
         enemyPosition.y = 0;
 
         return enemyPosition;
@@ -51,28 +41,13 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
     {  
         enemy.GetComponent<Health>().GetHeal(10);
         enemy.transform.position = PositionChanger();
-        enemy.SetActive(true);
+        enemy.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        enemy.GetComponent<EnemyMovement>().enabled = true;
+        enemy.GetComponent<Collider>().enabled = true;
         enemy.GetComponent<Animations>().Move();
-        enemy.GetComponentInChildren<SwordPool>().Get();
-    }
-
-    public void Realize(GameObject enemy)
-    {
-        enemy.SetActive(false);
-        _respawnQueue.Enqueue(enemy);
-
-        if (_isTimerNotActive)
-        {
-            _isTimerNotActive = false;
-            StartCoroutine(Timer());
-        }
-    }
-    
-    private IEnumerator Timer()
-    {
-        yield return new WaitForSeconds(3f);
-        GameObject enemy = _respawnQueue.Dequeue();
-        Get(enemy);
-        _isTimerNotActive = true;
+        SwordPool swordPool = enemy.GetComponentInChildren<SwordPool>();
+        swordPool.enabled = true;
+        swordPool.Get();
+        enemy.transform.position = PositionChanger();
     }
 }

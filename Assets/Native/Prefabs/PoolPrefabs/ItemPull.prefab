@@ -44,9 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387393aee945f7741b4c82d3608528a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 8642394094032170230, guid: 14d175c37d60d9d4693742324b16b001, type: 3}
+  _swordAddItem: {fileID: 8642394094032170230, guid: 14d175c37d60d9d4693742324b16b001, type: 3}
+  _swordAddItemCount: 10
   _healItem: {fileID: -33199502522897960, guid: d1ec4630b09b1294fa81fe9dfa837a65, type: 3}
-  _itemCount: 10
   _healItemCount: 5
-  _spawnAreaSizeX: 10
-  _spawnAreaSizeY: 10
+  _moveSpeedItem: {fileID: -2790942597601787765, guid: 485ba6d189dfc4b46ab8d76fae8a29db, type: 3}
+  _moveSpeedCount: 5
+  _swordSpeedItem: {fileID: -5939311638934407478, guid: 2999aa75fb7930d40904cd64319c1a7c, type: 3}
+  _swordSpeedCount: 5
+  _spawnAreaSizeX: 20
+  _spawnAreaSizeY: 20

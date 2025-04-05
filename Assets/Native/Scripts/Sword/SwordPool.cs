@@ -1,17 +1,15 @@
 using UnityEngine;
-using Zenject;
 
 public class SwordPool : MonoBehaviour, ISwordPool
 {
-    private ISwordPool _iSwordPool;
     SwordPool ISwordPool.SwordPool => this;
 
     [SerializeField] private GameObject _sword;
     [SerializeField] private int _swordCount;
-
+    
     private Vector3 _axis;
-    private GameObject[] swordArray;
-    private int _iterator = 1;
+    private  GameObject[] swordArray;
+    public int _iterator = 1;
 
     void Awake()
     {
@@ -22,7 +20,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
 
     public void Create()
     {
-        for (int i = 0; i < _swordCount; i++)
+        for(int i = 0; i < _swordCount; i++)
         {
             swordArray[i] = Instantiate(_sword.gameObject, transform.position, Quaternion.identity, gameObject.transform);
             swordArray[i].gameObject.SetActive(false);
@@ -36,7 +34,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
             float _rotateValue = 360 / value * i;
             _axis.z = _rotateValue;
 
-            swordArray[i].gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+            swordArray[i].gameObject.transform.rotation = new Quaternion(0,0,0,0);
             swordArray[i].gameObject.transform.Rotate(_axis);
         }
     }
@@ -45,7 +43,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
     {
         if (_iterator <= _swordCount)
         {
-            for (int i = 0; i < _iterator; i++)
+            for(int i = 0; i < _iterator; i++)
             {
                 swordArray[i].gameObject.SetActive(true);
             }
@@ -58,8 +56,8 @@ public class SwordPool : MonoBehaviour, ISwordPool
             _iterator++;
         }
     }
-
-    public void Realize(GameObject sword)
+    
+    public void Realize(GameObject sword) 
     {
         sword.SetActive(false);
         _iterator--;

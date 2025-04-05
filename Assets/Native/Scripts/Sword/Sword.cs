@@ -1,5 +1,4 @@
 using UnityEngine;
-using Zenject;
 
 public class Sword : MonoBehaviour
 {
@@ -16,7 +15,6 @@ public class Sword : MonoBehaviour
         {
             _swordPull.Realize(gameObject);
         }
-
         else if(collision.collider.layerOverridePriority == 2)
         {
             collision.gameObject.GetComponent<Health>().TakeDamage();

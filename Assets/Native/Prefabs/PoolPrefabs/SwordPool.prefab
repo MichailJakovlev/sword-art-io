@@ -47,8 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sword: {fileID: 7015350381093308292, guid: eb18425ce402fbf459fa18e8b906dc64, type: 3}
   _swordCount: 10
-  _axis: {x: 0, y: 0, z: 0}
-  _angle: 90
+  _iterator: 1
 --- !u!114 &-6399922223792703519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,4 +61,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swordsCenter: {fileID: 3015950522097732136}
-  _swordsRotateSpeed: 0.2
+  _swordsRotateSpeed: 2

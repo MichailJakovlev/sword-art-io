@@ -59,7 +59,7 @@ public class Leaderboard : MonoBehaviour, ILeaderboard
         {
             _isPlayerAuthed = false;
         }
-    }
+    }                   
   
     public void GetPlayers(string lbAnswer)
     {

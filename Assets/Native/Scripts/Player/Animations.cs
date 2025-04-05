@@ -4,19 +4,25 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     private Animator _animator;
-    private EnemyPool _enemyPool;
+    private Enemy _enemy;
     private EnemyMovement _enemyMovement;
     private Collider _collider;
+    
 
     private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
-        _enemyPool = GetComponentInParent<EnemyPool>();
-        _enemyMovement = GetComponent<EnemyMovement>();
         _collider = GetComponent<Collider>();
+        
+        if (gameObject.tag != "Player")
+        {
+            _enemy = GetComponent<Enemy>();
+            _enemyMovement = GetComponent<EnemyMovement>();
+            
+        }
     }
 
-    public void Move()
+    public void Move()  
     {
         _animator.Play("Move");
     }
@@ -40,13 +46,17 @@ public class Animations : MonoBehaviour
 
     private IEnumerator DeathAnim()
     {
-        _collider.enabled = false;
-        _enemyMovement.enabled = false;
+        if (gameObject.tag != "Player")
+        {
+            _collider.enabled = false;
+            _enemyMovement.enabled = false;
+           // _swordPool.enabled = false;
+        }
+        
         _animator.Play("Death");
+        
         yield return new WaitForSeconds(0.6f);
-        _enemyPool.Realize(gameObject);
-        _enemyMovement.enabled = true;
-        _collider.enabled = true;
+        _enemy.Realize();
     }
 
     private IEnumerator HitAnim()
@@ -54,12 +64,6 @@ public class Animations : MonoBehaviour
         _animator.Play("Hit");
         yield return new WaitForSeconds(0.25f);
         _animator.Play("Move");
-    }
-
-    private IEnumerator IdleAnim()
-    {
-        _animator.Play("Idle");
-        yield return new WaitUntil(() => _animator.GetBool("IsMove"));
     }
 }
 
