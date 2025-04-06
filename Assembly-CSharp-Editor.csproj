@@ -896,11 +896,11 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
@@ -1037,11 +1037,11 @@
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
