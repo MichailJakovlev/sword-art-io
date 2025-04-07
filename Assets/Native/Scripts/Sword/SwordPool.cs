@@ -16,6 +16,14 @@ public class SwordPool : MonoBehaviour, ISwordPool
         swordArray = new GameObject[_swordCount];
         Create();
         Get();
+        
+        if (transform.parent.tag != "Player")
+        {
+            for (int i = 0; i < Random.Range(0,9); i++)
+            {
+                Get();
+            }
+        } 
     }
 
     public void Create()
@@ -61,5 +69,14 @@ public class SwordPool : MonoBehaviour, ISwordPool
     {
         sword.SetActive(false);
         _iterator--;
+    }
+
+    public void RealizeAll()
+    {
+        int realizeCount = _iterator;
+        for (int i = 0; i < realizeCount; i++)
+        {
+            Realize(swordArray[i]);
+        }
     }
 }

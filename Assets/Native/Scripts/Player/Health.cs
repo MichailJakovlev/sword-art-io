@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int _healthValue;
-    
-    private int _maxHealthValue;
+    public int _healthValue;
+    public int _maxHealthValue;
     private Animations _animations;
 
     private void Awake()
