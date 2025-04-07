@@ -21,7 +21,7 @@ public class GameInstaller : MonoInstaller
     
     public override void InstallBindings()
          {
-             Application.targetFrameRate = 60;
+             Application.targetFrameRate = 1000;
              QualitySettings.vSyncCount = 0;
              
         EventBus eventBus = Container.InstantiatePrefabForComponent<EventBus>(_eventBus, _eventBus.transform.position, Quaternion.identity, null);
@@ -54,10 +54,10 @@ public class GameInstaller : MonoInstaller
         EnemyPool enemyPool = Container.InstantiatePrefabForComponent<EnemyPool>(_enemyPool, _enemyPool.transform.position, Quaternion.identity, null);
         Container.Bind<IEnemyPool>().To<EnemyPool>().FromInstance(enemyPool).AsSingle().NonLazy();
         
-        Player player = Container.InstantiatePrefabForComponent<Player>(_player, _player.transform.position, Quaternion.identity, null);
+        Player player = Container.InstantiatePrefabForComponent<Player>(_player, new Vector3(Random.Range(GameData.X * -1 + 15, GameData.X - 15), 0, Random.Range(GameData.Z * -1 + 15, GameData.Z - 15)), Quaternion.identity, null);
         Container.Bind<IPlayer>().To<Player>().FromInstance(player).AsSingle().NonLazy();
         
-        SwordPool swordPool = Container.InstantiatePrefabForComponent<SwordPool>(_swordPool, transform.position, Quaternion.identity, player.transform);
+        SwordPool swordPool = Container.InstantiatePrefabForComponent<SwordPool>(_swordPool, player.transform.position, Quaternion.identity, player.transform);
         Container.Bind<ISwordPool>().To<SwordPool>().FromInstance(swordPool).AsTransient().NonLazy();
 
         ItemPool itemPool = Container.InstantiatePrefabForComponent<ItemPool>(_itemPool, transform.position, Quaternion.identity, null);

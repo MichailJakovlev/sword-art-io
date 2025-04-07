@@ -7,6 +7,7 @@ public class Animations : MonoBehaviour
     private Enemy _enemy;
     private EnemyMovement _enemyMovement;
     private Collider _collider;
+    private Player _player;
     
 
     private void Awake()
@@ -19,6 +20,10 @@ public class Animations : MonoBehaviour
             _enemy = GetComponent<Enemy>();
             _enemyMovement = GetComponent<EnemyMovement>();
             
+        }
+        else
+        {
+            _player = GetComponent<Player>();
         }
     }
 
@@ -50,13 +55,13 @@ public class Animations : MonoBehaviour
         {
             _collider.enabled = false;
             _enemyMovement.enabled = false;
-           // _swordPool.enabled = false;
         }
         
         _animator.Play("Death");
         
         yield return new WaitForSeconds(0.6f);
-        _enemy.Realize();
+        _player?.Death();
+        _enemy?.Realize();
     }
 
     private IEnumerator HitAnim()

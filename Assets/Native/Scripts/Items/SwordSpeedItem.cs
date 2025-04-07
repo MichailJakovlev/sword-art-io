@@ -11,7 +11,7 @@ public class SwordSpeedItem : MonoBehaviour, IItem
     public void Awake()
     {
         _itemPool = GetComponentInParent<ItemPool>();
-        _buffSpeed = _swordRotate._swordsRotateSpeed * 2;
+        _buffSpeed = _swordRotate._swordsRotateSpeed * 3;
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -27,6 +27,6 @@ public class SwordSpeedItem : MonoBehaviour, IItem
         _itemPool.Realize(gameObject);
         entity.GetComponentInChildren<SwordsRotate>()._swordsRotateSpeed = _buffSpeed;
 
-        entity.GetComponent<SwordSpeedBuffTimer>().StartBuffTimer(_buffSpeed / 2);
+        entity.GetComponent<SwordSpeedBuffTimer>().StartBuffTimer(_buffSpeed / 3);
     }
 }

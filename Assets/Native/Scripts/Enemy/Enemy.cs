@@ -1,12 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IScorable
 {
     private EnemyPool _enemyPool;
     private SpriteRenderer _spriteRenderer;
     private SwordPool _swordPool;
-
+    public int score { get; set; }
+    
     private void Start()
     {
         _enemyPool = GetComponentInParent<EnemyPool>();
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
     public void Realize()
     {
         _spriteRenderer.enabled = false;
-        _swordPool.enabled = false;
+        _swordPool.RealizeAll();
         StartCoroutine(Timer());
     }
 
