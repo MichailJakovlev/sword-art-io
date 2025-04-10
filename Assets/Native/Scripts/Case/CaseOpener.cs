@@ -86,7 +86,9 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
 
         Debug.Log(caseItems[^4]); // log
         string caseItem = caseItems[^4].ToString();
-        _saveData.SaveData.AddSkin(caseItem, true, false);
+        // _saveData.SaveData.AddSkin(caseItem, true, false);
+        _saveData.SaveData.UnlockSkin(caseItem);
+        Debug.Log("case add skin");
         if (firstEnabledFlag == false)
         {
             firstEnabledFlag = true;

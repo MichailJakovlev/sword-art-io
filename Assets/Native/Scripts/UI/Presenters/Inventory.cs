@@ -43,17 +43,20 @@ public class Inventory : MonoBehaviour, IInventory
 
         for (int i = 0; i < fromJson.skins.Count; i++)
         {
-            GameObject newElement = Instantiate(_gameConfig.SkinsSO.skinCardPrefab, _gridInventory);
+            if (fromJson.skins[i].isUnlocked == true)
+            {
+                GameObject newElement = Instantiate(_gameConfig.SkinsSO.skinCardPrefab, _gridInventory);
 
-            _backgroundRarity = newElement.transform.GetComponent<Image>();
-            _skinImage = newElement.transform.GetChild(0).GetComponent<Image>();
+                _backgroundRarity = newElement.transform.GetComponent<Image>();
+                _skinImage = newElement.transform.GetChild(0).GetComponent<Image>();
 
-            SkinInfo skin = _gameConfig.SkinsSO.skinInfo.Find(skin => fromJson.skins[i].name == skin.name.ToString());
-            RarityInfo skinRarity =
-                _gameConfig.RaritySO.rarityInfo.Find(rarity => skin.skinsRarity == rarity.skinsRarity);
+                SkinInfo skin = _gameConfig.SkinsSO.skinInfo.Find(skin => fromJson.skins[i].name == skin.name.ToString());
+                RarityInfo skinRarity =
+                    _gameConfig.RaritySO.rarityInfo.Find(rarity => skin.skinsRarity == rarity.skinsRarity);
 
-            _backgroundRarity.color = skinRarity.color;
-            _skinImage.sprite = skin.sprite;
+                _backgroundRarity.color = skinRarity.color;
+                _skinImage.sprite = skin.sprite;
+            }
         }
     }
 }
