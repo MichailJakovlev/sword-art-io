@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour, IScorable
     private SpriteRenderer _spriteRenderer;
     private SwordPool _swordPool;
     public int score { get; set; }
+    public string name { get; set; }
     
     private void Start()
     {

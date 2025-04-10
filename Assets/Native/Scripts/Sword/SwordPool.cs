@@ -78,5 +78,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
         {
             Realize(swordArray[i]);
         }
+
+        _iterator = 1;
     }
 }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour, IPlayer, IScorable
     private Health _health;
     private SwordPool _swordPool;
     public int score { get; set; }
+    public string name { get; set; }
 
     private void Start()
     {
