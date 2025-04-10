@@ -33,12 +33,28 @@ public class SaveData : MonoBehaviour, ISaveData
 
     private void Awake()
     {
+        if (!File.Exists(Path.Combine(Application.dataPath, jsonPath)))
+        {
+            SaveSkins(new SkinData());
+        }
         var defaultSkin = _gameConfig.SkinsSO.skinInfo.Find(skin => skin.isDefault).name.ToString();
         AddSkin(defaultSkin, true, true);
         foreach(SkinInfo skin in _gameConfig.SkinsSO.skinInfo)
         {
             AddSkin(skin.name.ToString(), false, false);
         }
+        Debug.Log("awake");
+    }
+
+    public void UnlockSkin(string skinName)
+    {
+        SkinData skinData = LoadSkins();
+        var unlocked = skinData.skins.Find(skin => skin.name == skinName);
+        unlocked.isUnlocked = true;
+
+        Debug.Log(skinData.skins.Find(skin => skin.name == skinName).isUnlocked);
+        var json = JsonUtility.ToJson(skinData, prettyPrint: true);
+        File.WriteAllText(Path.Combine(Application.dataPath, jsonPath), json);
     }
 
     public void AddSkin(string name, bool isUnlocked, bool isSelected)

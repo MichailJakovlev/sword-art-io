@@ -9,5 +9,6 @@ public class SkinInfo
     public Sprite sprite;
     public GameObject prefabSkin;
     public SkinsRarity skinsRarity;
+    public Sprite weaponSprite;
 
 }
