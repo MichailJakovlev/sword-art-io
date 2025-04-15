@@ -3,7 +3,7 @@
         {
             "name": "Knight",
             "isUnlocked": true,
-            "isSelected": true
+            "isSelected": false
         },
         {
             "name": "Guts",
@@ -12,7 +12,7 @@
         },
         {
             "name": "Jason",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
@@ -27,8 +27,8 @@
         },
         {
             "name": "Orc",
-            "isUnlocked": false,
-            "isSelected": false
+            "isUnlocked": true,
+            "isSelected": true
         },
         {
             "name": "Pirate",
@@ -52,7 +52,7 @@
         },
         {
             "name": "Viking",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         }
     ]

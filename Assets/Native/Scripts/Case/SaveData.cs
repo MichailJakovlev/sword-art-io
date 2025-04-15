@@ -43,7 +43,6 @@ public class SaveData : MonoBehaviour, ISaveData
         {
             AddSkin(skin.name.ToString(), false, false);
         }
-        Debug.Log("awake");
     }
 
     public void UnlockSkin(string skinName)
@@ -51,10 +50,22 @@ public class SaveData : MonoBehaviour, ISaveData
         SkinData skinData = LoadSkins();
         var unlocked = skinData.skins.Find(skin => skin.name == skinName);
         unlocked.isUnlocked = true;
-
-        Debug.Log(skinData.skins.Find(skin => skin.name == skinName).isUnlocked);
-        var json = JsonUtility.ToJson(skinData, prettyPrint: true);
-        File.WriteAllText(Path.Combine(Application.dataPath, jsonPath), json);
+        SaveSkins(skinData);
+    }
+    
+    public void SelectSkin(string skinName)
+    {
+        SkinData skinData = LoadSkins();
+        var fullPath = Path.Combine(Application.dataPath, jsonPath);
+        var json = File.ReadAllText(fullPath);
+        var fromJson = JsonUtility.FromJson<SkinData>(json);
+        foreach (var skin in skinData.skins)
+        {
+            skin.isSelected = false;
+        }
+        var selected = skinData.skins.Find(skin => skin.name == skinName);
+        selected.isSelected = true;
+        SaveSkins(skinData);  
     }
 
     public void AddSkin(string name, bool isUnlocked, bool isSelected)
