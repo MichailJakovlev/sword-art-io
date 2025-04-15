@@ -38,7 +38,10 @@ public class EnemyPool : MonoBehaviour, IEnemyPool
     }
 
     public void Get(GameObject enemy)
-    {  
+    {
+        Enemy enemyPref = enemy.GetComponent<Enemy>();
+        enemyPref._shadow.SetActive(true);
+        enemyPref._nameUI.SetActive(true);
         enemy.GetComponent<Health>().GetHeal(10);
         enemy.transform.position = PositionChanger();
         enemy.GetComponentInChildren<SpriteRenderer>().enabled = true;

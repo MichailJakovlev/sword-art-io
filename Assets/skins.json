@@ -32,12 +32,12 @@
         },
         {
             "name": "Pirate",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Reaper",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {

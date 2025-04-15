@@ -1,5 +1,6 @@
 ﻿public enum EnemyNames : byte
 {
+    КириllКомар,
     Jhon,
     Bob,
     Ivan,

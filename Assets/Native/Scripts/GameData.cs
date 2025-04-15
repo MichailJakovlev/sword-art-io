@@ -1,11 +1,12 @@
 ﻿public static class GameData
 {
-    private static int enemyAmount = 10;
-    private static int swordAddItemCount = 30;
+    private static int enemyAmount = 0;
+    private static int swordAddItemCount = 20;
     private static int healItemCount = 5;
     private static int moveSpeedItemCount = 5;
     private static int swordSpeedItemCount = 5;
     
+    private static float buffTime = 5;
     private static float mapSizeX = 55;
     private static float mapSizeZ = 55;
     
@@ -42,6 +43,13 @@
         get => swordSpeedItemCount;
         
         private set => swordSpeedItemCount = value;
+    }
+
+    public static float BuffTime
+    {
+        get => buffTime;
+        
+        private set => buffTime = value;
     }
     
     public static float X
