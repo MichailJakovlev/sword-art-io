@@ -50,7 +50,7 @@ public class GameInstaller : MonoInstaller
 
         RateGame rateGame = Container.InstantiatePrefabForComponent<RateGame>(_rateGame, _rateGame.transform.position, Quaternion.identity, null);
         Container.Bind<IRateGame>().To<RateGame>().FromInstance(rateGame).AsSingle();
-
+        
         EnemyPool enemyPool = Container.InstantiatePrefabForComponent<EnemyPool>(_enemyPool, _enemyPool.transform.position, Quaternion.identity, null);
         Container.Bind<IEnemyPool>().To<EnemyPool>().FromInstance(enemyPool).AsSingle().NonLazy();
         
@@ -59,7 +59,7 @@ public class GameInstaller : MonoInstaller
         
         SwordPool swordPool = Container.InstantiatePrefabForComponent<SwordPool>(_swordPool, player.transform.position, Quaternion.identity, player.transform);
         Container.Bind<ISwordPool>().To<SwordPool>().FromInstance(swordPool).AsTransient().NonLazy();
-
+        
         ItemPool itemPool = Container.InstantiatePrefabForComponent<ItemPool>(_itemPool, transform.position, Quaternion.identity, null);
         Container.Bind<IItemPool>().To<ItemPool>().FromInstance(itemPool).AsSingle().NonLazy();
 

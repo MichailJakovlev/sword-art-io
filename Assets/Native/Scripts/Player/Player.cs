@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IPlayer, IScorable
@@ -7,25 +6,26 @@ public class Player : MonoBehaviour, IPlayer, IScorable
     Player IPlayer.Player => this;
     public GameObject GameObject => gameObject;
     private Health _health;
-    private SwordPool _swordPool;
-    [SerializeField] private GameObject _shadow;
+    public SwordPool _swordPool;
+    public GameObject _shadow;
     [SerializeField] private GameObject _nameUI;
+    private SelectSkin _selectSkin;
     public int score { get; set; }
     public string name { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         name = "Гитлер";    
         _health = GetComponent<Health>();
         _swordPool = GetComponentInChildren<SwordPool>();
+        _selectSkin = GetComponentInChildren<SelectSkin>();
     }
 
-    public void OnDrawGizmos()
+    void Start()
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(new (0,0,0), new (GameData.X * 2, 0, GameData.Z * 2));
+        _selectSkin.LoadSkin();
     }
-
+    
     public void Death()
     {
         _nameUI.SetActive(false);

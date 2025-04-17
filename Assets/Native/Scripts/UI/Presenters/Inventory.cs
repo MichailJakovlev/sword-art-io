@@ -51,6 +51,9 @@ public class Inventory : MonoBehaviour, IInventory
                 _skinImage = newElement.transform.GetChild(0).GetComponent<Image>();
 
                 SkinInfo skin = _gameConfig.SkinsSO.skinInfo.Find(skin => fromJson.skins[i].name == skin.name.ToString());
+                newElement.GetComponent<SkinCardData>().skinName = skin.name.ToString();
+                var button = newElement.AddComponent<Button>();
+                button.onClick.AddListener(() => _saveData.SaveData.SelectSkin(skin.name.ToString()));
                 RarityInfo skinRarity =
                     _gameConfig.RaritySO.rarityInfo.Find(rarity => skin.skinsRarity == rarity.skinsRarity);
 
