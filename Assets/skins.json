@@ -28,7 +28,7 @@
         {
             "name": "Orc",
             "isUnlocked": true,
-            "isSelected": true
+            "isSelected": false
         },
         {
             "name": "Pirate",
@@ -53,7 +53,7 @@
         {
             "name": "Viking",
             "isUnlocked": true,
-            "isSelected": false
+            "isSelected": true
         }
     ]
 }

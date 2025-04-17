@@ -65,7 +65,7 @@ public class SaveData : MonoBehaviour, ISaveData
         }
         var selected = skinData.skins.Find(skin => skin.name == skinName);
         selected.isSelected = true;
-        SaveSkins(skinData);  
+        SaveSkins(skinData);
     }
 
     public void AddSkin(string name, bool isUnlocked, bool isSelected)
@@ -98,7 +98,7 @@ public class SaveData : MonoBehaviour, ISaveData
         File.WriteAllText(Path.Combine(Application.dataPath, jsonPath), json);
     }
 
-    private SkinData LoadSkins()
+    public SkinData LoadSkins()
     {
         string fullPath = Path.Combine(Application.dataPath, jsonPath);
 

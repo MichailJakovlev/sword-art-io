@@ -15,6 +15,7 @@ public class MenuInstaller : MonoInstaller
     [SerializeField] private ReadyGameAPI _readyGameAPI;
     [SerializeField] private UISwitcher _uiSwitcher;
     [SerializeField] private CaseOpener _caseOpener;
+    [SerializeField] private BackgroundMenuScene _backgroundMenuScene;
 
     [SerializeField] private SaveData _saveData;
     [SerializeField] private Inventory _inventory;
@@ -56,6 +57,9 @@ public class MenuInstaller : MonoInstaller
         
         CaseOpener caseOpener = Container.InstantiatePrefabForComponent<CaseOpener>(_caseOpener, _caseOpener.transform.position, Quaternion.identity, null);
         Container.Bind<ICaseOpener>().To<CaseOpener>().FromInstance(caseOpener).AsSingle();
+        
+        BackgroundMenuScene BackgroundMenuScene = Container.InstantiatePrefabForComponent<BackgroundMenuScene>(_backgroundMenuScene, _backgroundMenuScene.transform.position, Quaternion.identity, null);
+        Container.Bind<IBackgroundMenuScene>().To<BackgroundMenuScene>().FromInstance(BackgroundMenuScene).AsSingle();
         
         Inventory inventory = Container.InstantiatePrefabForComponent<Inventory>(_inventory, _inventory.transform.position, Quaternion.identity, null);
         Container.Bind<IInventory>().To<Inventory>().FromInstance(inventory).AsSingle();
