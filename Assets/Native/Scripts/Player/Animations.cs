@@ -9,8 +9,7 @@ public class Animations : MonoBehaviour
     private Collider _collider;
     private Player _player;
     
-
-    private void Awake()
+    private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
         _collider = GetComponent<Collider>();

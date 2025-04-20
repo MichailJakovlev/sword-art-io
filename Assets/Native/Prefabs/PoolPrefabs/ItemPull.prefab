@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swordAddItem: {fileID: -7074270034686490506, guid: bc101f0f3c9a7744da5c1d96beecee83, type: 3}
-  _healItem: {fileID: -33199502522897960, guid: d1ec4630b09b1294fa81fe9dfa837a65, type: 3}
-  _moveSpeedItem: {fileID: -2790942597601787765, guid: 485ba6d189dfc4b46ab8d76fae8a29db, type: 3}
-  _swordSpeedItem: {fileID: -5939311638934407478, guid: 2999aa75fb7930d40904cd64319c1a7c, type: 3}
+  _healItem: {fileID: 1986040731024033878, guid: d1ec4630b09b1294fa81fe9dfa837a65, type: 3}
+  _moveSpeedItem: {fileID: 2329797356415131847, guid: 5375204652e63f645a5e29bb735bb2a9, type: 3}
+  _swordSpeedItem: {fileID: 4744035386152534491, guid: c406eaf17055db94dab5f0053943d2db, type: 3}

@@ -7,22 +7,22 @@
         },
         {
             "name": "Guts",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Jason",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "King",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Ninja",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
@@ -32,28 +32,28 @@
         },
         {
             "name": "Pirate",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Reaper",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Samurai",
-            "isUnlocked": false,
-            "isSelected": false
+            "isUnlocked": true,
+            "isSelected": true
         },
         {
             "name": "Vader",
-            "isUnlocked": false,
+            "isUnlocked": true,
             "isSelected": false
         },
         {
             "name": "Viking",
             "isUnlocked": true,
-            "isSelected": true
+            "isSelected": false
         }
     ]
 }
