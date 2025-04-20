@@ -28,7 +28,7 @@
         {
             "name": "Orc",
             "isUnlocked": true,
-            "isSelected": false
+            "isSelected": true
         },
         {
             "name": "Pirate",
@@ -38,7 +38,7 @@
         {
             "name": "Reaper",
             "isUnlocked": true,
-            "isSelected": true
+            "isSelected": false
         },
         {
             "name": "Samurai",
