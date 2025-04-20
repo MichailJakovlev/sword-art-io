@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _navMeshAgent.updateRotation = false; 
         _navMeshAgent.speed = _moveSpeed;
+        
     }
     
     void FixedUpdate()

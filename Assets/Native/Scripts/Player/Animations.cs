@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Animations : MonoBehaviour
 {
-    private Animator _animator;
+    public Animator _animator;
     private Enemy _enemy;
     private EnemyMovement _enemyMovement;
     private Collider _collider;
     private Player _player;
     
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponentInChildren<Animator>();
         _collider = GetComponent<Collider>();

@@ -1,19 +1,31 @@
 ﻿using UnityEngine;
-using Zenject;
-
+using Random = UnityEngine.Random;
 public class SelectSkin : MonoBehaviour
 {
-    private GameConfig _gameConfig;
+    public GameConfig _gameConfig;
     private SaveData saveData;
-    public Player _player;
+    public SpriteRenderer skinSprite;
+    public Animator animator;
+    private GameObject enemyRandomSkin;
+    private Sprite weaponSprite;
+    private SwordPool swordPool;
+    private IScorable scorable;
     
-    [Inject]
-    private void Construct(GameConfig gameConfig)
+    public void Awake()
     {
-        _gameConfig = gameConfig;
+        scorable = GetComponentInParent<IScorable>();
+        if (gameObject.tag != "PlayerSkin")
+        {
+            EnemySkin();
+        }
+        else
+        {
+            PlayerSkin();
+        }
+        scorable.weapon = weaponSprite;
     }
     
-    public void LoadSkin()
+    public void PlayerSkin()
     {   
         saveData = new SaveData();
         
@@ -25,15 +37,22 @@ public class SelectSkin : MonoBehaviour
                 {
                     if (skin.name == _gameConfig.SkinsSO.skinInfo[i].name.ToString())
                     {
-                        Instantiate(_gameConfig.SkinsSO.skinInfo[i].prefabSkin, transform.position, Quaternion.identity, gameObject.transform);
+                        skinSprite.sprite = _gameConfig.SkinsSO.skinInfo[i].prefabSkin.GetComponent<SpriteRenderer>().sprite;
+                        animator.runtimeAnimatorController = _gameConfig.SkinsSO.skinInfo[i].prefabSkin.GetComponent<Animator>().runtimeAnimatorController;
+                        weaponSprite = _gameConfig.SkinsSO.skinInfo[i].weaponSprite;
+                        scorable.skin = skin.name;
                     }
                 }
             }
         }   
     }
 
-    void Start()
+    public void EnemySkin()
     {
-        _player._shadow.SetActive(true);
+        int randomSkin = Random.Range(0, _gameConfig.SkinsSO.skinInfo.Count);
+        enemyRandomSkin = _gameConfig.SkinsSO.skinInfo[randomSkin].prefabSkin;
+        skinSprite.sprite = enemyRandomSkin.GetComponent<SpriteRenderer>().sprite;
+        animator.runtimeAnimatorController = enemyRandomSkin.GetComponent<Animator>().runtimeAnimatorController;
+        weaponSprite = _gameConfig.SkinsSO.skinInfo[randomSkin].weaponSprite;
     }
 }

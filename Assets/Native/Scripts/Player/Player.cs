@@ -2,28 +2,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IPlayer, IScorable
 {
-    private Player _player;
+    [SerializeField] private GameObject _nameUI;
     Player IPlayer.Player => this;
-    public GameObject GameObject => gameObject;
     private Health _health;
+    public GameObject GameObject => gameObject;
     public SwordPool _swordPool;
     public GameObject _shadow;
-    [SerializeField] private GameObject _nameUI;
-    private SelectSkin _selectSkin;
+    
     public int score { get; set; }
     public string name { get; set; }
+    public Sprite weapon { get; set; }
+    public string skin  { get; set; }
 
-    private void Awake()
+    private void Start()
     {
         name = "Гитлер";    
         _health = GetComponent<Health>();
         _swordPool = GetComponentInChildren<SwordPool>();
-        _selectSkin = GetComponentInChildren<SelectSkin>();
-    }
-
-    void Start()
-    {
-        _selectSkin.LoadSkin();
     }
     
     public void Death()
