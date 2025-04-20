@@ -1,15 +1,19 @@
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
 public class Enemy : MonoBehaviour, IScorable
 {
     private EnemyPool _enemyPool;
     private SpriteRenderer _spriteRenderer;
-    private SwordPool _swordPool;
+    public SwordPool _swordPool;
     public GameObject _shadow;
     public GameObject _nameUI;
+    private Animations _animations;
     public int score { get; set; }
     public string name { get; set; }
+    public Sprite weapon { get; set; }
+    public string skin  { get; set; }
     
     private void Start()
     {
@@ -26,7 +30,7 @@ public class Enemy : MonoBehaviour, IScorable
         _swordPool.RealizeAll();
         StartCoroutine(Timer());
     }
-
+    
     private IEnumerator Timer()
     {
         yield return new WaitForSeconds(3f);

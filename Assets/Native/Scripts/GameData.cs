@@ -1,6 +1,6 @@
 ﻿public static class GameData
 {
-    private static int enemyAmount = 0;
+    private static int enemyAmount = 10;
     private static int swordAddItemCount = 20;
     private static int healItemCount = 5;
     private static int moveSpeedItemCount = 5;
