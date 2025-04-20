@@ -8,7 +8,7 @@
         {
             "name": "Guts",
             "isUnlocked": true,
-            "isSelected": false
+            "isSelected": true
         },
         {
             "name": "Jason",
@@ -43,7 +43,7 @@
         {
             "name": "Samurai",
             "isUnlocked": true,
-            "isSelected": true
+            "isSelected": false
         },
         {
             "name": "Vader",

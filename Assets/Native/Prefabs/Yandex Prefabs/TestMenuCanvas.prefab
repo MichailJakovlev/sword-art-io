@@ -1145,6 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentSkinParent: {fileID: 2486424791784517368}
   _swordPool: {fileID: 2250077620147887454}
+  scorable: {fileID: 8818383007163129637}
 --- !u!1 &2109691238569600558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5107,6 +5108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5997878777431316650}
+  - component: {fileID: 8818383007163129637}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -5133,6 +5135,21 @@ Transform:
   - {fileID: 1043116659859647040}
   m_Father: {fileID: 5188605958191152057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8818383007163129637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057371366293108322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172f67942f3f72440b112a8f23dd0508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameUI: {fileID: 0}
+  _swordPool: {fileID: 0}
+  _shadow: {fileID: 0}
 --- !u!1 &9219033679808890564
 GameObject:
   m_ObjectHideFlags: 0

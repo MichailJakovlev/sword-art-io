@@ -10,6 +10,8 @@ public class MenuCurrentSkin : MonoBehaviour
     [SerializeField] private GameObject _currentSkinParent;
     [SerializeField] private SwordPool _swordPool;
     
+    public Player scorable;
+    
     [Inject]
     private void Construct(GameConfig gameConfig, ISaveData saveData)
     {
@@ -20,17 +22,19 @@ public class MenuCurrentSkin : MonoBehaviour
     private void Awake()
     {
         var selectedSkinData = _saveData.SaveData.LoadSkins().skins.Find(skin => skin.isSelected == true);
+        
         for (int i = 0; i < _gameConfig.SkinsSO.skinInfo.Count; i++)
         {
             var skinInfo = _gameConfig.SkinsSO.skinInfo[i];
             var skinInstantiate = Instantiate(skinInfo.prefabSkin, _currentSkinParent.transform);
             skinInstantiate.SetActive(false);
-            skinInstantiate.GetComponent<SpriteRenderer>().sortingOrder = 7;
+            skinInstantiate.GetComponent<SpriteRenderer>().sortingOrder = 6;
             skinInstantiate.GetComponent<Animator>().enabled = false;
             if (skinInfo.name.ToString() == selectedSkinData.name)
             {
                 skinInstantiate.SetActive(true);
                 skinInstantiate.GetComponent<Animator>().enabled = true;
+                scorable.weapon = skinInfo.weaponSprite;
             }
         }
     }
