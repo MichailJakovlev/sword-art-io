@@ -65,7 +65,7 @@ public class SaveData : MonoBehaviour, ISaveData
         }
         var selected = skinData.skins.Find(skin => skin.name == skinName);
         selected.isSelected = true;
-        SaveSkins(skinData);  
+        SaveSkins(skinData);
     }
 
     public void AddSkin(string name, bool isUnlocked, bool isSelected)

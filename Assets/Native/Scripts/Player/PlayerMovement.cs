@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {   
-            _animations.Idle();
+              _animations.Idle();
         }
         
         _navMeshAgent.velocity = targetPosition * _moveSpeed * Time.fixedDeltaTime; 

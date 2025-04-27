@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IPlayer, IScorable
     public GameObject GameObject => gameObject;
     public SwordPool _swordPool;
     public GameObject _shadow;
+   
     
     public int score { get; set; }
     public string name { get; set; }
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour, IPlayer, IScorable
 
     private void Start()
     {
-        name = "Гитлер";    
+        name = PlayerPrefs.GetString("playerName");    
         _health = GetComponent<Health>();
         _swordPool = GetComponentInChildren<SwordPool>();
     }

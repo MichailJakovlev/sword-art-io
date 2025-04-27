@@ -6,18 +6,21 @@ public class Sword : MonoBehaviour
     private IScorable _scorable;
     private Health _enemyHealth;
     private ScoreView _scoreView;
+    private ParticleSystem _particleSystem;
 
     private void Awake()
     {
         _scoreView = FindObjectOfType<ScoreView>();
         _swordPull = GetComponentInParent<SwordPool>();
         _scorable = GetComponentInParent<IScorable>();
+        _particleSystem = GetComponentInParent<ParticleSystem>();
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.layerOverridePriority == 3)
         {
+            _particleSystem.Play();
             _swordPull.Realize(gameObject);
         }
         else if(collision.collider.layerOverridePriority == 2)
@@ -31,5 +34,5 @@ public class Sword : MonoBehaviour
             }
             _enemyHealth.TakeDamage();
         }
-    }  
+    }
 }

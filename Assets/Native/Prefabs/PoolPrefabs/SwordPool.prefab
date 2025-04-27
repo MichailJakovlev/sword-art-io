@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sword: {fileID: 7015350381093308292, guid: eb18425ce402fbf459fa18e8b906dc64, type: 3}
   _swordCount: 10
+  _swordEffect: {fileID: 6633508883771241255, guid: 687da373a5092d3439f5e5d849e23851, type: 3}
+  _swordEffects: []
+  swordArray: []
   _iterator: 1
 --- !u!114 &-6399922223792703519
 MonoBehaviour:

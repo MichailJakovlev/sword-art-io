@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Zenject;
 
 public class SwordPool : MonoBehaviour, ISwordPool
 {
@@ -6,6 +8,8 @@ public class SwordPool : MonoBehaviour, ISwordPool
 
     [SerializeField] private GameObject _sword;
     [SerializeField] private int _swordCount;
+    [SerializeField] private GameObject _swordEffect;
+    [SerializeField] private GameObject[] _swordEffects;
     
     private Vector3 _axis;
     public GameObject[] swordArray;
@@ -14,6 +18,8 @@ public class SwordPool : MonoBehaviour, ISwordPool
     void Awake()
     {
         swordArray = new GameObject[_swordCount];
+        
+        _swordEffects = new GameObject[_swordCount];
         Create();
         Get();
         
@@ -30,7 +36,8 @@ public class SwordPool : MonoBehaviour, ISwordPool
     {
         for(int i = 0; i < _swordCount; i++)
         {
-            swordArray[i] = Instantiate(_sword.gameObject, transform.position, Quaternion.identity, gameObject.transform);
+            _swordEffects[i] = Instantiate(_swordEffect, transform.position, gameObject.transform.rotation, gameObject.transform);
+            swordArray[i] = Instantiate(_sword.gameObject, transform.position, Quaternion.identity, _swordEffects[i].transform);
             swordArray[i].gameObject.SetActive(false);
         }
     }
@@ -59,7 +66,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
             {
                 swordArray[i].gameObject.SetActive(false);
             }
-
+    
             PositionChanger(_iterator);
             _iterator++;
         }

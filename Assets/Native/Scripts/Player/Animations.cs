@@ -8,6 +8,7 @@ public class Animations : MonoBehaviour
     private EnemyMovement _enemyMovement;
     private Collider _collider;
     private Player _player;
+    private bool isAnimationBusy = false;
     
     private void Awake()
     {
@@ -39,7 +40,10 @@ public class Animations : MonoBehaviour
 
     public void Idle()
     {
-        _animator.Play("Idle");
+        if (isAnimationBusy == false)
+        {
+            _animator.Play("Idle");
+        }
     }
 
     public void Death()
@@ -50,6 +54,7 @@ public class Animations : MonoBehaviour
 
     private IEnumerator DeathAnim()
     {
+        isAnimationBusy = true;
         if (gameObject.tag != "Player")
         {
             _collider.enabled = false;
@@ -61,13 +66,16 @@ public class Animations : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         _player?.Death();
         _enemy?.Realize();
+        isAnimationBusy = false;
     }
 
     private IEnumerator HitAnim()
     {
+        isAnimationBusy = true;
         _animator.Play("Hit");
         yield return new WaitForSeconds(0.25f);
         _animator.Play("Move");
+        isAnimationBusy = false;
     }
 }
 

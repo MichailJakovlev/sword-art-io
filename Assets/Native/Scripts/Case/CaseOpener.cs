@@ -84,7 +84,7 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
             _skinImage.sprite = skin.sprite;
         }
 
-        Debug.Log(caseItems[^4]); // log
+        Debug.Log(caseItems[^4]);
         string caseItem = caseItems[^4].ToString();
         // _saveData.SaveData.AddSkin(caseItem, true, false);
         _saveData.SaveData.UnlockSkin(caseItem);
