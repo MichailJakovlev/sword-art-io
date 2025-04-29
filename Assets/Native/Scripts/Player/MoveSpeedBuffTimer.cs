@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class MoveSpeedBuffTimer : MonoBehaviour
 {
     private MoveTimerUI _timerUI;
+    [SerializeField] private ParticleSystem _particle;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class MoveSpeedBuffTimer : MonoBehaviour
     public void StartBuffTimer(float originSpeed)
     {
         StopAllCoroutines();
-
+        _particle.Play();
         if (gameObject.tag == "Player")
         {
             gameObject.GetComponent<PlayerMovement>()._moveSpeed = originSpeed * 2;
@@ -34,7 +35,7 @@ public class MoveSpeedBuffTimer : MonoBehaviour
     public IEnumerator BuffTimer(float originSpeed)
     {
         yield return new WaitForSeconds(GameData.BuffTime);
-        
+        _particle.Stop();
         if (gameObject.tag == "Player")
         {
             gameObject.GetComponent<PlayerMovement>()._moveSpeed = originSpeed;

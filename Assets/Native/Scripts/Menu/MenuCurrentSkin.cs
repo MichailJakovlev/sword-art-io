@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Zenject;
 
@@ -28,7 +27,7 @@ public class MenuCurrentSkin : MonoBehaviour
             var skinInfo = _gameConfig.SkinsSO.skinInfo[i];
             var skinInstantiate = Instantiate(skinInfo.prefabSkin, _currentSkinParent.transform);
             skinInstantiate.SetActive(false);
-            skinInstantiate.GetComponent<SpriteRenderer>().sortingOrder = 6;
+            skinInstantiate.GetComponent<SpriteRenderer>().sortingOrder = 2;
             skinInstantiate.GetComponent<Animator>().enabled = false;
             if (skinInfo.name.ToString() == selectedSkinData.name)
             {
@@ -45,7 +44,7 @@ public class MenuCurrentSkin : MonoBehaviour
         var weaponSelectedSprite = _gameConfig.SkinsSO.skinInfo.Find(skin => skin.name.ToString() == selectedSkinData.name).weaponSprite;
         for (int i = 0; i < _swordPool.transform.childCount; i++)
         {
-            _swordPool.transform.GetChild(i).GetComponentInChildren<SpriteRenderer>().sprite = weaponSelectedSprite;
+            _swordPool.transform.GetChild(i).GetChild(0).GetComponentInChildren<SpriteRenderer>().sprite = weaponSelectedSprite;
         }
     }
 

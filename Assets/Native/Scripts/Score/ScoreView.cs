@@ -50,7 +50,7 @@ public class ScoreView : MonoBehaviour
         {
             if (i < 5)
             {
-                if (item.Key == "Гитлер")
+                if (item.Key == PlayerPrefs.GetString("playerName"))
                 {
                     _scoreTexts[i].fontStyle = FontStyles.Bold;
                 }
@@ -62,6 +62,6 @@ public class ScoreView : MonoBehaviour
                 i++;
             }   
         }
-        _playerScoreText.text = score["Гитлер"].ToString();
+        _playerScoreText.text = score[PlayerPrefs.GetString("playerName")].ToString();
     }
 }
