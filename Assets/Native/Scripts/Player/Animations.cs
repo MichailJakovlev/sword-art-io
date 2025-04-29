@@ -29,11 +29,15 @@ public class Animations : MonoBehaviour
 
     public void Move()  
     {
-        _animator.Play("Move");
+        if (isAnimationBusy == false)
+        {
+            _animator.Play("Move");
+        }
     }
 
     public void Hit()
     {
+        isAnimationBusy = true;
         StopAllCoroutines();
         StartCoroutine(HitAnim());
     }
@@ -48,13 +52,13 @@ public class Animations : MonoBehaviour
 
     public void Death()
     {
+        isAnimationBusy = true;
         StopAllCoroutines();
         StartCoroutine(DeathAnim());
     }
 
     private IEnumerator DeathAnim()
     {
-        isAnimationBusy = true;
         if (gameObject.tag != "Player")
         {
             _collider.enabled = false;
@@ -71,7 +75,6 @@ public class Animations : MonoBehaviour
 
     private IEnumerator HitAnim()
     {
-        isAnimationBusy = true;
         _animator.Play("Hit");
         yield return new WaitForSeconds(0.25f);
         _animator.Play("Move");
