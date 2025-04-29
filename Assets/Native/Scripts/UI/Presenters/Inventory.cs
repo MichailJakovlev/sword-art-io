@@ -36,11 +36,8 @@ public class Inventory : MonoBehaviour, IInventory
         {
             Destroy(_gridInventory.GetChild(i).gameObject);
         }
-
-        var fullPath = Path.Combine(Application.dataPath, _saveData.SaveData.jsonPath);
-        var json = File.ReadAllText(fullPath);
-        var fromJson = JsonUtility.FromJson<SaveData.SkinData>(json);
-
+        var fromJson = JsonUtility.FromJson<SaveData.SkinData>(PlayerPrefs.GetString("skinData"));
+        
         for (int i = 0; i < fromJson.skins.Count; i++)
         {
             if (fromJson.skins[i].isUnlocked == true)

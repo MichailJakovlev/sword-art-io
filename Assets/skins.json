@@ -3,56 +3,56 @@
         {
             "name": "Knight",
             "isUnlocked": true,
-            "isSelected": false
-        },
-        {
-            "name": "Guts",
-            "isUnlocked": true,
             "isSelected": true
         },
         {
+            "name": "Guts",
+            "isUnlocked": false,
+            "isSelected": false
+        },
+        {
             "name": "Jason",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "King",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Ninja",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Orc",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Pirate",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Reaper",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Samurai",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Vader",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         },
         {
             "name": "Viking",
-            "isUnlocked": true,
+            "isUnlocked": false,
             "isSelected": false
         }
     ]

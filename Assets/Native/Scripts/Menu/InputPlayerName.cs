@@ -24,5 +24,4 @@ public class InputPlayerName : MonoBehaviour
         PlayerPrefs.SetString("playerName", _inputPlayerName.text);
         PlayerPrefs.Save();
     }
-    // todo: swords rotate do script or change in SwordsRotate.cs
 }

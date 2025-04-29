@@ -1,5 +1,5 @@
 mergeInto(LibraryManager.library, {
-  
+
     SendGameReady : function() {
       YaGames.init()
       .then((ysdk) => {
@@ -7,7 +7,7 @@ mergeInto(LibraryManager.library, {
       })
       .catch(console.error);
     },
-  
+
     SendGameStart : function() {
       try {
         ysdk.features.GameplayAPI.start()
@@ -15,7 +15,7 @@ mergeInto(LibraryManager.library, {
         console.error;
       }
     },
-  
+
     SendGameStop : function() {
       try {
         ysdk.features.GameplayAPI.stop()
@@ -54,11 +54,11 @@ mergeInto(LibraryManager.library, {
                       })
               } else {
                 gameInstance.SendMessage('RateGame(Clone)', 'ReviewToPrice');
-                gameInstance.SendMessage('EventBus(Clone)','StartGameEvent') 
+                gameInstance.SendMessage('EventBus(Clone)','StartGameEvent')
               }
           })
     },
-  
+
     ShowFullscreen : function(){
       ysdk.adv.showFullscreenAdv({
       callbacks: {
@@ -113,7 +113,7 @@ mergeInto(LibraryManager.library, {
               };
               var lbEntries = [];
               res.entries.forEach(line => {
-                  var entry = { 
+                  var entry = {
                       "playerName": line.player.publicName,
                       "rank": line.rank,
                       "score": line.score
@@ -130,7 +130,7 @@ mergeInto(LibraryManager.library, {
     AuthingPlayer : function() {
       ysdk.auth.openAuthDialog().then(() => {
         // Игрок успешно авторизован.
-        
+
         console.log('Игрок не авторизован.');
         gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 1);
         initPlayer().catch(err => {
@@ -140,42 +140,39 @@ mergeInto(LibraryManager.library, {
         });
         }).catch(() => {
           // Игрок не авторизован.
-          console.log('Игрок успешно авторизован.'); 
+          console.log('Игрок успешно авторизован.');
           gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
-        }); 
-    },  
+        });
+    },
 
-     GetPlayerAuthData: function() {
-       var player;
-       function initPlayer() {
-       return ysdk.getPlayer().then(_player => {
-             player = _player;
+    GetPlayerAuthData: function() {
+      var player;
+      function initPlayer() {
+      return ysdk.getPlayer().then(_player => {
+            player = _player;
 
-             console.log(player);
-             return player;
-         });
-       } 
+            console.log(player);
+            return player;
+        });
+      }
 
-       initPlayer().then(_player => {
-         if (_player.getMode() === 'lite') {
-           // Игрок не авторизован.
-           console.log('Игрок не авторизован.');
-           gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
-         }
-         else
-         {
-          console.log('Игрок успешно авторизован.'); 
+      initPlayer().then(_player => {
+        if (_player.getMode() === 'lite') {
+          // Игрок не авторизован.
+          console.log('Игрок не авторизован.');
+          gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
+        }
+        else
+        {
+          console.log('Игрок успешно авторизован.');
           gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 1);
-          
-         }
-     }).catch(err => {
-         // Ошибка при инициализации объекта Player.
-         console.log('Ошибка при инициализации объекта Player.');
-         gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
-     }); 
-     }
+
+        }
+        }).catch(err => {
+          // Ошибка при инициализации объекта Player.
+          console.log('Ошибка при инициализации объекта Player.');
+          gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
+        });
+    },
+
   });
-
-
-
-  

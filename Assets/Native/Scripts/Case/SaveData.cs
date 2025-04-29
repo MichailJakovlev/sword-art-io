@@ -1,16 +1,14 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using Zenject;
 
 public class SaveData : MonoBehaviour, ISaveData
 {
     SaveData ISaveData.SaveData => this;
     private GameConfig _gameConfig;
-    [HideInInspector] public string jsonPath = "skins.json";
-
+    
     [Inject]
     private void Construct(GameConfig gameConfig)
     {
@@ -30,19 +28,27 @@ public class SaveData : MonoBehaviour, ISaveData
     {
         public List<Skin> skins = new List<Skin>();
     }
-
-    private void Awake()
+    
+    private void LoadSkinsData()
     {
-        if (!File.Exists(Path.Combine(Application.dataPath, jsonPath)))
+        SkinData skinData;
+        if (PlayerPrefs.HasKey("skinData"))
         {
-            SaveSkins(new SkinData());
+            skinData = JsonUtility.FromJson<SkinData>(PlayerPrefs.GetString("skinData"));
         }
-        var defaultSkin = _gameConfig.SkinsSO.skinInfo.Find(skin => skin.isDefault).name.ToString();
-        AddSkin(defaultSkin, true, true);
-        foreach(SkinInfo skin in _gameConfig.SkinsSO.skinInfo)
+        else
         {
-            AddSkin(skin.name.ToString(), false, false);
+            skinData = new SkinData();
+            var defaultSkin = _gameConfig.SkinsSO.skinInfo.Find(skin => skin.isDefault).name.ToString();
+            AddSkin(skinData, defaultSkin, true, true);
+            foreach(SkinInfo skin in _gameConfig.SkinsSO.skinInfo)
+            {
+                AddSkin(skinData, skin.name.ToString(), false, false);
+            }
         }
+        
+        string json = JsonUtility.ToJson(skinData, prettyPrint: true);
+        PlayerPrefs.SetString("skinData", json);
     }
 
     public void UnlockSkin(string skinName)
@@ -56,9 +62,6 @@ public class SaveData : MonoBehaviour, ISaveData
     public void SelectSkin(string skinName)
     {
         SkinData skinData = LoadSkins();
-        var fullPath = Path.Combine(Application.dataPath, jsonPath);
-        var json = File.ReadAllText(fullPath);
-        var fromJson = JsonUtility.FromJson<SkinData>(json);
         foreach (var skin in skinData.skins)
         {
             skin.isSelected = false;
@@ -68,10 +71,8 @@ public class SaveData : MonoBehaviour, ISaveData
         SaveSkins(skinData);
     }
 
-    public void AddSkin(string name, bool isUnlocked, bool isSelected)
+    public void AddSkin(SkinData skinData, string name, bool isUnlocked, bool isSelected)
     {
-        SkinData skinData = LoadSkins();
-
         Skin newSkin = new Skin
         {
             name = name,
@@ -79,12 +80,7 @@ public class SaveData : MonoBehaviour, ISaveData
             isSelected = isSelected
         };
 
-        var fullPath = Path.Combine(Application.dataPath, jsonPath);
-        var json = File.ReadAllText(fullPath);
-        var fromJson = JsonUtility.FromJson<SkinData>(json);
-        var isRepeat = fromJson.skins.Exists(skin => skin.name == name);
-
-        if (!isRepeat)
+        if (!skinData.skins.Exists(skin => skin.name == name))
         {
             skinData.skins.Add(newSkin);
         }
@@ -95,17 +91,15 @@ public class SaveData : MonoBehaviour, ISaveData
     private void SaveSkins(SkinData data)
     {
         string json = JsonUtility.ToJson(data, prettyPrint: true);
-        File.WriteAllText(Path.Combine(Application.dataPath, jsonPath), json);
+        PlayerPrefs.SetString("skinData", json);
     }
 
     public SkinData LoadSkins()
     {
-        string fullPath = Path.Combine(Application.dataPath, jsonPath);
-
-        if (File.Exists(fullPath))
+        LoadSkinsData();
+        if (PlayerPrefs.HasKey("skinData"))
         {
-            var json = File.ReadAllText(fullPath);
-            return JsonUtility.FromJson<SkinData>(json);
+            return JsonUtility.FromJson<SkinData>(PlayerPrefs.GetString("skinData"));
         }
         else
         {

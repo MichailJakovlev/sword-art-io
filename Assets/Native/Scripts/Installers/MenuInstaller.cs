@@ -22,9 +22,6 @@ public class MenuInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        SaveData saveData = Container.InstantiatePrefabForComponent<SaveData>(_saveData, _saveData.transform.position, Quaternion.identity, null);
-        Container.Bind<ISaveData>().To<SaveData>().FromInstance(saveData).AsSingle();
-        
         EventBus eventBus = Container.InstantiatePrefabForComponent<EventBus>(_eventBus, _eventBus.transform.position, Quaternion.identity, null);
         Container.Bind<IEventBus>().To<EventBus>().FromInstance(eventBus).AsSingle();
 
@@ -54,6 +51,9 @@ public class MenuInstaller : MonoInstaller
 
         ReadyGameAPI readyGameAPI = Container.InstantiatePrefabForComponent<ReadyGameAPI>(_readyGameAPI, _readyGameAPI.transform.position, Quaternion.identity, null);
         Container.Bind<IReadyGameAPI>().To<ReadyGameAPI>().FromInstance(readyGameAPI).AsSingle();
+        
+        SaveData saveData = Container.InstantiatePrefabForComponent<SaveData>(_saveData, _saveData.transform.position, Quaternion.identity, null);
+        Container.Bind<ISaveData>().To<SaveData>().FromInstance(saveData).AsSingle();
         
         CaseOpener caseOpener = Container.InstantiatePrefabForComponent<CaseOpener>(_caseOpener, _caseOpener.transform.position, Quaternion.identity, null);
         Container.Bind<ICaseOpener>().To<CaseOpener>().FromInstance(caseOpener).AsSingle();
