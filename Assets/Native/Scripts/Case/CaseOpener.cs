@@ -17,7 +17,15 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     private Image _skinImage;
     private Image _backgroundRarity;
     private List<SkinNames> caseItems;
+    
     [SerializeField] private CaseHandler _caseHandler;
+    
+    private GameObject _caseHandlerGo;
+
+    private string currentSkinLotName;
+    
+
+    private int skinLot = 7;
 
     private bool firstEnabledFlag = false;
 
@@ -26,6 +34,11 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     {
         _gameConfig = gameConfig;
         _saveData = saveData;
+    }
+
+    private void Start()
+    {
+        _caseHandlerGo = GameObject.Find("TestMenuCanvas(Clone)");
     }
 
     private List<SkinNames> FillArray()
@@ -84,10 +97,12 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
             _skinImage.sprite = skin.sprite;
         }
 
-        Debug.Log(caseItems[^4]);
-        string caseItem = caseItems[^4].ToString();
+        Debug.Log(caseItems[^skinLot]);
+        string caseItem = caseItems[^skinLot].ToString();
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.ButtonsShow(caseItem);
         _saveData.SaveData.UnlockSkin(caseItem);
-        Debug.Log("case add skin");
+        currentSkinLotName = caseItem;
+        
         if (firstEnabledFlag == false)
         {
             firstEnabledFlag = true;
@@ -98,21 +113,25 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     private IEnumerator SpinAnimation()
     {
         yield return new WaitForSeconds(1f);
-        _caseHandler.SetAlpha();
+        _caseHandler.SetAlpha(1);
 
+        int itemPadding = 5;
         float elapsed = 0f;
         var xGridCellSize = _grid.GetComponent<GridLayoutGroup>().cellSize.x;
         var xGridSpacing = _grid.GetComponent<GridLayoutGroup>().spacing.x;
         var length = caseItems.Count;
         Vector2 velocity = Vector2.zero;
 
-        var endPosOfItem = (length - 3) * (xGridCellSize + xGridSpacing);
+        var endPosOfItem = (length - (skinLot - 1)) * (xGridCellSize + xGridSpacing);
 
-        targetPosition =
-            new(
-                UnityEngine.Random.Range((endPosOfItem - xGridCellSize - xGridSpacing) * -1,
-                    (endPosOfItem - xGridSpacing) * -1) + _grid.rect.width / 2, 0);
+        var minPos = (endPosOfItem - xGridCellSize - xGridSpacing + itemPadding) * -1;
+        var maxPos = (endPosOfItem - xGridSpacing - itemPadding) * -1;
 
+        // Debug.Log(minPos + " : " + maxPos);
+
+        targetPosition = new(UnityEngine.Random.Range(minPos, maxPos) + _grid.rect.width / 2, 0);
+
+        // Debug.Log(targetPosition.x);
 
         while (elapsed < _gameConfig.CaseSO.spinDuration)
         {
@@ -131,11 +150,32 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
         }
 
         _grid.anchoredPosition = targetPosition;
+
+        var skinLotCurrent = _gameConfig.SkinsSO.skinInfo.Find(skin => currentSkinLotName == skin.name.ToString());
+        
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.skinLotImage.sprite = skinLotCurrent.sprite;
+
+        var skinLotBackground = _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.skinLotBackground;
+        var rarityInfo = _gameConfig.RaritySO.rarityInfo.Find(rarity => rarity.skinsRarity == skinLotCurrent.skinsRarity);
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.costSellText.text = rarityInfo.cost.ToString();
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.costSellTextShadow.text = rarityInfo.cost.ToString();
+        var skinLotBackgroundAlpha = 0.4f;
+        skinLotBackground.color = new Color(rarityInfo.color.r, rarityInfo.color.g, rarityInfo.color.b, skinLotBackground.color.a);
+
+        
+        
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseOpenAnimation.caseOpenAnimator.Play("Empty State");
+        
+        yield return new WaitForSeconds(0.01f);
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.EndAnimation();
+
+        
+        Debug.Log("animation stoped");
     }
 
     private void Reset()
     {
-        _grid = (RectTransform)GameObject.Find("Grid").transform;
+        _grid = (RectTransform)GameObject.Find("CaseGrid").transform;
         _grid.anchoredPosition = new Vector2(0, 0);
     }
     

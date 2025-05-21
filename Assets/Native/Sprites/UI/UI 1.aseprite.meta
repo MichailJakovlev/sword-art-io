@@ -147,7 +147,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: UI 1_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -168,7 +168,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -189,7 +189,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -210,7 +210,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -231,7 +231,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -252,7 +252,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_5
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -273,7 +273,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_6
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -294,7 +294,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_7
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -315,7 +315,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_8
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -336,7 +336,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_9
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -357,7 +357,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_10
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -378,7 +378,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_11
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -399,7 +399,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_12
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -420,7 +420,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_13
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -441,7 +441,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_14
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -462,7 +462,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_15
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -483,7 +483,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_16
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -504,7 +504,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_17
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -525,7 +525,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_18
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -546,7 +546,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_19
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -567,7 +567,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_20
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -588,7 +588,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_21
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -609,7 +609,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_22
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -630,7 +630,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_23
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -651,7 +651,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_24
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -672,7 +672,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_25
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -693,7 +693,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_26
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -714,7 +714,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_27
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -735,7 +735,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_28
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -756,7 +756,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_29
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -777,7 +777,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_30
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -798,7 +798,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_31
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -819,7 +819,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_32
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -840,7 +840,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_33
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -861,7 +861,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_34
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -882,7 +882,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_35
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -903,7 +903,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_36
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -924,7 +924,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_37
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -945,7 +945,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_38
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -966,7 +966,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_39
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -987,7 +987,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_40
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1008,7 +1008,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_41
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1029,7 +1029,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_42
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1050,7 +1050,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_43
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1071,7 +1071,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_44
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1092,7 +1092,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_45
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1113,7 +1113,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_46
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1134,7 +1134,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_47
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1155,7 +1155,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_48
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1176,7 +1176,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_49
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1197,7 +1197,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_50
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1218,7 +1218,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_51
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1239,7 +1239,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_52
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1260,7 +1260,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_53
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1281,7 +1281,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_54
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1302,7 +1302,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_55
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1323,7 +1323,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_56
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1344,7 +1344,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_57
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1365,7 +1365,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_58
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1386,9 +1386,9 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_59
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
-    border: {x: 2, y: 2, z: 2, w: 2}
+    border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
@@ -1407,7 +1407,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_60
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -1428,17 +1428,38 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: UI 1_61
     originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 191
+      y: 30
+      width: 10
+      height: 6
+    spriteID: 12f8eff7ac2d41f4b8bad69336c1e8d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: UI 1_62
+    originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 193
-      y: 33
-      width: 5
-      height: 3
-    spriteID: 12f8eff7ac2d41f4b8bad69336c1e8d4
+      x: 211
+      y: 4
+      width: 10
+      height: 32
+    spriteID: 829ca25b8f6f5a14ca8c783cedac766e
     spriteBone: []
     spriteOutline: []
     vertices: []

@@ -60,9 +60,6 @@ public class MenuInstaller : MonoInstaller
         
         BackgroundMenuScene BackgroundMenuScene = Container.InstantiatePrefabForComponent<BackgroundMenuScene>(_backgroundMenuScene, _backgroundMenuScene.transform.position, Quaternion.identity, null);
         Container.Bind<IBackgroundMenuScene>().To<BackgroundMenuScene>().FromInstance(BackgroundMenuScene).AsSingle();
-        
-        Inventory inventory = Container.InstantiatePrefabForComponent<Inventory>(_inventory, _inventory.transform.position, Quaternion.identity, null);
-        Container.Bind<IInventory>().To<Inventory>().FromInstance(inventory).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
     }

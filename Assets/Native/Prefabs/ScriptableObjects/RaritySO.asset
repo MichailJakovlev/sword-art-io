@@ -15,9 +15,17 @@ MonoBehaviour:
   rarityInfo:
   - skinsRarity: 0
     color: {r: 0.2198736, g: 0.5496408, b: 0.764151, a: 1}
+    sortingOrder: 1
+    cost: 25
   - skinsRarity: 1
     color: {r: 0.3310571, g: 0.21960783, b: 0.7647059, a: 1}
+    sortingOrder: 2
+    cost: 50
   - skinsRarity: 2
     color: {r: 0.7647059, g: 0.21960783, b: 0.6264061, a: 1}
+    sortingOrder: 3
+    cost: 75
   - skinsRarity: 3
     color: {r: 0.7647059, g: 0.62313807, b: 0.21960783, a: 1}
+    sortingOrder: 4
+    cost: 100

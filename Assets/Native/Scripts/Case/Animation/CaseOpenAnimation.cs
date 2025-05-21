@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class CaseOpenAnimation : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] public Animator caseOpenAnimator;
 
     public void Play()
     {
-        animator.Play("chest_open");
+        caseOpenAnimator.Play("chest_open");
     }
+
 }
