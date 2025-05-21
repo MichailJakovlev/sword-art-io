@@ -9,6 +9,7 @@ public class Animations : MonoBehaviour
     private Collider _collider;
     private Player _player;
     private bool isAnimationBusy = false;
+    private PlayerMovement _playerMovement;
     
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class Animations : MonoBehaviour
         else
         {
             _player = GetComponent<Player>();
+            _playerMovement = GetComponent<PlayerMovement>();
         }
     }
 
@@ -59,10 +61,14 @@ public class Animations : MonoBehaviour
 
     private IEnumerator DeathAnim()
     {
+        _collider.enabled = false;
         if (gameObject.tag != "Player")
         {
-            _collider.enabled = false;
             _enemyMovement.enabled = false;
+        }
+        else
+        {
+            _playerMovement.enabled = false;
         }
         
         _animator.Play("Death");

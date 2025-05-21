@@ -25,7 +25,6 @@ public class UIHandler : MonoBehaviour
         _eventBus = eventBus;
         _rateGame = rateGame;
         _readyGameAPI = readyGameAPI;
-
     }
 
     private void OnEnable()
