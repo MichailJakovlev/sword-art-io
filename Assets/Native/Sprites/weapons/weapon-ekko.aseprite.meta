@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aeb0123e9bd15654091b61eb55d6e5fb
+guid: a3f6b457bce369145a0a6defa8fc7d13
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638736881672422083
+  platformSettingsDirtyTick: 638856903235181151
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: sword
+  - name: weapon-ekko
     originalName: 
-    pivot: {x: 0.52380955, y: 0.47619048}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 21
-    spriteID: 43671d75fe200d44b851e619cd815f84
+      width: 40
+      height: 40
+    spriteID: ba42ce231f9f5e941ba58c010d33c40f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,25 +148,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1070925405
+      value0: 4040032741
       value1: 0
       value2: 0
       value3: 0
-    guid: 1070925405
-    name: sword
+    guid: 0
+    name: weapon-ekko
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: sword
+    - name: weapon-ekko
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 22
-        width: 21
-        height: 21
-      spriteId: 43671d75fe200d44b851e619cd815f84
+        x: 12
+        y: 12
+        width: 40
+        height: 40
+      spriteId: ba42ce231f9f5e941ba58c010d33c40f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -218,6 +218,18 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   - name: WebGL
     overridden: 0
     ignorePlatformSupport: 0
@@ -242,8 +254,32 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: tvOS
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: VisionOS
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 32, y: 32}
+  previousTextureSize: {x: 64, y: 64}

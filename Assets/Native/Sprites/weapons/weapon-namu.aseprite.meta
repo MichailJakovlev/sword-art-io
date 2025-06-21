@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 957076ceee9b576469aee65a7688c0e2
+guid: fd7d9ef6bbaed9d43a778a35b7a8aca5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638777431116489968
+  platformSettingsDirtyTick: 638857867855355189
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: sword-guts
+  - name: weapon-namu
     originalName: 
-    pivot: {x: 0.52380955, y: 0.47619048}
+    pivot: {x: 0.54347825, y: 0.5217391}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 21
-    spriteID: b39cf06f3e39b814f80ef2a59bc6c36a
+      width: 46
+      height: 46
+    spriteID: cda7ee1fd71aef84089ad0f96656489b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,25 +148,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 377044357
+      value0: 4268396566
       value1: 0
       value2: 0
       value3: 0
-    guid: 377044357
-    name: sword-guts
+    guid: 0
+    name: weapon-namu
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: sword-guts
+    - name: weapon-namu
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 21
-        y: 22
-        width: 21
-        height: 21
-      spriteId: b39cf06f3e39b814f80ef2a59bc6c36a
+        x: 7
+        y: 8
+        width: 46
+        height: 46
+      spriteId: cda7ee1fd71aef84089ad0f96656489b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -218,6 +218,18 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   - name: WebGL
     overridden: 0
     ignorePlatformSupport: 0
@@ -242,8 +254,32 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: tvOS
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: VisionOS
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 32, y: 32}
+  previousTextureSize: {x: 64, y: 64}

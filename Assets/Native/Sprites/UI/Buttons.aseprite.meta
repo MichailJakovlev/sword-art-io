@@ -439,6 +439,48 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  - name: Buttons_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 2, z: 2, w: 3}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 4
+      width: 19
+      height: 16
+    spriteID: e22c0a410d44ac44b81d5da1ffd81603
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Buttons_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 3, z: 2, w: 3}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 4
+      width: 19
+      height: 17
+    spriteID: 87e1d7830b0aac742914d8e49bb64196
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     uuid:
@@ -458,7 +500,7 @@ ScriptedImporter:
       cellRect:
         x: 2
         y: 56
-        width: 79
+        width: 99
         height: 69
       spriteId: effeabbb8904c7d429381c8313c8b357
     linkedCells: []

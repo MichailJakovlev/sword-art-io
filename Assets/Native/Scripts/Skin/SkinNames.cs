@@ -10,5 +10,12 @@ public enum SkinNames
     Samurai,
     Vader,
     Viking,
-    Guts
+    Guts,
+    Namu,
+    Aang,
+    Cavalier,
+    Ekko,
+    Puss,
+    Templar,
+    Witcher
 }

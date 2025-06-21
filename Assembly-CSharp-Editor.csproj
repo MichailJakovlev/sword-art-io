@@ -46,10 +46,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.31f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.31f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -893,11 +893,11 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
@@ -1016,6 +1016,9 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
@@ -1036,9 +1039,6 @@
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>D:\unity-pojects\sword-art-io\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>

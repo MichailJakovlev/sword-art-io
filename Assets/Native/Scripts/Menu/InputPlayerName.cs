@@ -21,7 +21,17 @@ public class InputPlayerName : MonoBehaviour
 
     public void EnterPlayerName()
     {
+        if (_inputPlayerName.isFocused == true)
+        {
+            Debug.Log("focus lost");
+        }
         PlayerPrefs.SetString("playerName", _inputPlayerName.text);
         PlayerPrefs.Save();
+    }
+
+    public void FocusOutEvent()
+    {
+        
+        
     }
 }

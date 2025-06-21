@@ -33,10 +33,10 @@ MonoBehaviour:
     itemWeaponAddPrefab: {fileID: 0}
   - name: 1
     isDefault: 0
-    isAchievementSkin: 1
+    isAchievementSkin: 0
     sprite: {fileID: -3151636426878492923, guid: 3294a672c9469de42bc24cc970ce97f3, type: 3}
     prefabSkin: {fileID: 8080202338598928996, guid: f703fe1faa025ec468be679833d14bd6, type: 3}
-    skinsRarity: 3
+    skinsRarity: 2
     weaponSprite: {fileID: -8173780592330002383, guid: 5296fa63e13a59b4fb6cb4cd84f72422, type: 3}
     weaponPrefab: {fileID: 7015350381093308292, guid: 7ac2014a4d945044db2a65d88015a780, type: 3}
     itemWeaponAddPrefab: {fileID: 0}
@@ -63,7 +63,7 @@ MonoBehaviour:
     isAchievementSkin: 0
     sprite: {fileID: 3846194406573936797, guid: 7014ab0f5a650884388a6218b1a5f255, type: 3}
     prefabSkin: {fileID: 2906861873758126305, guid: fb044d20fca042b458ff6ade65f4d960, type: 3}
-    skinsRarity: 2
+    skinsRarity: 1
     weaponSprite: {fileID: -5462889065991726346, guid: 71c733fd4c497134ea436e701266f0eb, type: 3}
     weaponPrefab: {fileID: 7015350381093308292, guid: 0fe95a2b027c6f840af58716b2f1bdc6, type: 3}
     itemWeaponAddPrefab: {fileID: 0}
@@ -111,5 +111,68 @@ MonoBehaviour:
     skinsRarity: 2
     weaponSprite: {fileID: -1956639882475806320, guid: 4d35312c9edcd8b44b2d3373e10dc841, type: 3}
     weaponPrefab: {fileID: 7015350381093308292, guid: 72736b2468286e54f89b29ebcbb55d12, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 12
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 3909744602171853626, guid: aeb1acb33dda4cb4c85e16b8fc81b0b8, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: 098872540693b4e40a76d8d4d78ef5cc, type: 3}
+    skinsRarity: 0
+    weaponSprite: {fileID: -6858611187511071538, guid: 937f6d7e1a88f5f48a4749c690c34aa1, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: a0996aa32d06b1f43bf90f2f21007e0f, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 13
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -4137102932158405283, guid: e6db81b992edfca4bb380fec6e8a5509, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: 4d7ceb9d85732054f8466b89cdb759a6, type: 3}
+    skinsRarity: 0
+    weaponSprite: {fileID: 7496647946868713792, guid: ae6a0b4c1b80d4b448c56d9d14d87f41, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: 85a7a35dbcfe5a64089639ecf12c159c, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 14
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 6910704087746302482, guid: 4ca7a7305aa20094b831b7f274c1ed6a, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: c43db9e79d43f0746b1317588fce906a, type: 3}
+    skinsRarity: 1
+    weaponSprite: {fileID: 1836426921190849665, guid: a3f6b457bce369145a0a6defa8fc7d13, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: dc4cd1bfe76cc0e4fa595e001ce29747, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 15
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 5440903071561893939, guid: 3891afb9ad61a8046a9e58fd0fc8fe27, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: 0a746c3e8922c4f48920ca4b6f05496d, type: 3}
+    skinsRarity: 1
+    weaponSprite: {fileID: 7429370509220126612, guid: f87cf40428a6788439b3db375c56f84f, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: 762a1bd0a2156ba4e94ae4d5f1c58476, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 16
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -1289321573894606963, guid: c89cc4e1914b0ec4a86e0e8c1a06d0e5, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: 6722b2c3c7d7b0c4586f00e36ec9a4a6, type: 3}
+    skinsRarity: 0
+    weaponSprite: {fileID: -358944091722043501, guid: b947e0e20c1f8814a8bbdb11c2c5020c, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: 4566329e44d0c7e4ba3684a8798aa2ca, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 17
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: 2969481816359549769, guid: 0e9e1664b4dc40545946230071940f91, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: e593d69502576b744bfd64ddc1cc70ae, type: 3}
+    skinsRarity: 2
+    weaponSprite: {fileID: -8319025677809565211, guid: 0f8b555992588564ebd9063e26235769, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: c33f11cd23d80e74a888dbf76c39073b, type: 3}
+    itemWeaponAddPrefab: {fileID: 0}
+  - name: 11
+    isDefault: 0
+    isAchievementSkin: 0
+    sprite: {fileID: -291963796761595174, guid: 7abc66ec2e355e14da7c6fb868a77c01, type: 3}
+    prefabSkin: {fileID: 8717591041051030798, guid: a5ecc692ed224df419bd7e307180d023, type: 3}
+    skinsRarity: 3
+    weaponSprite: {fileID: 8412491230971247864, guid: fd7d9ef6bbaed9d43a778a35b7a8aca5, type: 3}
+    weaponPrefab: {fileID: 7015350381093308292, guid: 243e15cd523cea144ab6005b422f4c29, type: 3}
     itemWeaponAddPrefab: {fileID: 0}
   skinCardPrefab: {fileID: 6450527248555726010, guid: db639d7fa6fedda43ae779b7643da4fb, type: 3}
