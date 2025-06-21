@@ -12,11 +12,19 @@ public class CoinCounter : MonoBehaviour
     {
         coins++;
         int genericCoins = PlayerPrefs.GetInt("Coins");
-        genericCoins += coins;
+        genericCoins++;
         PlayerPrefs.SetInt("Coins", genericCoins);
         StartCoroutine(CoinTextAnimation());
         _coinText.text = coins.ToString();
         _coinShadowText.text = _coinText.text;
+    }
+
+    public void DubbleCoins()
+    {
+        coins *= 2;
+        int genericCoins = PlayerPrefs.GetInt("Coins");
+        genericCoins += coins;
+        PlayerPrefs.SetInt("Coins", genericCoins);
     }
 
     public void ClearCoins()
@@ -25,7 +33,7 @@ public class CoinCounter : MonoBehaviour
         _coinText.text = coins.ToString();
         _coinShadowText.text = _coinText.text;
     }
-
+  
     private IEnumerator CoinTextAnimation()
     {
         for (int i = 0; i < 40; i++)

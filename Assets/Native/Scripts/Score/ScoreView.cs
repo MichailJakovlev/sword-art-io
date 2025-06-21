@@ -19,6 +19,8 @@ public class ScoreView : MonoBehaviour
     private Enemy _enemy;
     private Player _player;
     private int lastPlayerScore = 0;
+    private int minI = 0;
+    private int maxI = 10;
     
     public Dictionary<string, int> score = new Dictionary<string, int>();
     
@@ -35,7 +37,12 @@ public class ScoreView : MonoBehaviour
             if (i < EnemyPool.enemyArray.Length)
             {
                 _enemy = EnemyPool.enemyArray[i].GetComponent<Enemy>();
-                var name = (EnemyNames)i;
+                if (i != 0)
+                {
+                    minI = i * 10 + 1;
+                    maxI = minI + 9;
+                }
+                var name = (EnemyNames)Random.Range(minI, maxI);
                 _enemy.name = name.ToString();
                 _enemy.score = Random.Range(0, 25);
                 score.Add(_enemy.name, _enemy.score);

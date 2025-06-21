@@ -15,7 +15,7 @@ public class Authorization : MonoBehaviour, IAuthorization
 
     public void Start()
     {
-      //  GetPlayerAuthData();
+        GetPlayerAuthData();
     }
 
     public void Auth() => AuthingPlayer();

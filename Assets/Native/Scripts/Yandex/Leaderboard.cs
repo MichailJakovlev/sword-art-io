@@ -62,7 +62,7 @@ public class Leaderboard : MonoBehaviour, ILeaderboard
     }                   
   
     public void GetPlayers(string lbAnswer)
-    {
+    {   
         PlayerJsonArray playerArray = JsonUtility.FromJson<PlayerJsonArray>(lbAnswer);
 
         for (int i = 0; i < playerArray.entries.Length; i++)

@@ -8,6 +8,7 @@ public class MenuCurrentSkin : MonoBehaviour
     
     [SerializeField] private GameObject _currentSkinParent;
     [SerializeField] private SwordPool _swordPool;
+    static public string _skinWeaponName;
     
     public Player scorable;
     
@@ -30,10 +31,11 @@ public class MenuCurrentSkin : MonoBehaviour
             skinInstantiate.GetComponent<SpriteRenderer>().sortingOrder = 2;
             skinInstantiate.GetComponent<Animator>().enabled = false;
             if (skinInfo.name.ToString() == selectedSkinData.name)
-            {
+            {   
                 skinInstantiate.SetActive(true);
                 skinInstantiate.GetComponent<Animator>().enabled = true;
                 scorable.weapon = skinInfo.weaponSprite;
+                _skinWeaponName = skinInfo.name.ToString();
             }
         }
     }
@@ -45,6 +47,7 @@ public class MenuCurrentSkin : MonoBehaviour
         for (int i = 0; i < _swordPool.transform.childCount; i++)
         {
             _swordPool.transform.GetChild(i).GetChild(0).GetComponentInChildren<SpriteRenderer>().sprite = weaponSelectedSprite;
+            _skinWeaponName = _gameConfig.SkinsSO.skinInfo.Find(skin => skin.name.ToString() == selectedSkinData.name).name.ToString();
         }
     }
 

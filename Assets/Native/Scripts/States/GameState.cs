@@ -1,9 +1,15 @@
+using System;
 using UnityEngine;
 
 public class GameState : MonoBehaviour, IGameState
 {
     private IGameState _gameState;
     GameState IGameState.GameState => this;
+
+    private void Start()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     private void OnEnable()
     {

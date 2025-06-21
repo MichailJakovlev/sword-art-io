@@ -14,6 +14,7 @@ public class SwordPool : MonoBehaviour, ISwordPool
     private Vector3 _axis;
     public GameObject[] swordArray;
     public int _iterator = 1;
+    private SwordCountView _swordCountView;
 
     void Awake()
     {
@@ -29,7 +30,11 @@ public class SwordPool : MonoBehaviour, ISwordPool
             {
                 Get();
             }
-        } 
+        }
+        else
+        {
+            _swordCountView = FindFirstObjectByType<SwordCountView>();
+        }
     }
 
     public void Create()
@@ -69,6 +74,10 @@ public class SwordPool : MonoBehaviour, ISwordPool
     
             PositionChanger(_iterator);
             _iterator++;
+            if (_swordCountView != null)
+            {
+                _swordCountView.PlusSwordCountText();
+            }
         }
     }
     
@@ -76,6 +85,10 @@ public class SwordPool : MonoBehaviour, ISwordPool
     {
         sword.SetActive(false);
         _iterator--;
+        if (_swordCountView != null)
+        {
+            _swordCountView.MinusSwordCountText();
+        }
     }
 
     public void RealizeAll()
