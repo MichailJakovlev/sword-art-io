@@ -6,8 +6,10 @@ public class Chest : MonoBehaviour
 {
    [SerializeField] private List<CoinDroper> _coinDropers;
    [SerializeField] private GameObject _chestSprite;
+   [SerializeField] private Animator _animator;
    private Collider _collider;
    private int _health = 10;
+   
 
    void Start()
    {
@@ -17,16 +19,20 @@ public class Chest : MonoBehaviour
          coinDroper.gameObject.SetActive(false);
       }
       _collider = GetComponent<Collider>();
+
    }
    
    private void OnCollisionEnter(Collision collision)
    {
       if (collision.collider.layerOverridePriority == 3)
       {
+         StartCoroutine(ChestHitAnimation());
          _health--;
          if (_health <= 0)
          {
-            ChestOpen();
+            _collider.enabled = false;
+            StopAllCoroutines();
+            StartCoroutine(ChestOpenAnimation());
          }
       }
    }
@@ -38,9 +44,22 @@ public class Chest : MonoBehaviour
          coinDroper.gameObject.SetActive(true);
          coinDroper.Drop();
       }
-      _collider.enabled = false;
       _chestSprite.SetActive(false);
       StartCoroutine(Respawn());
+   }
+
+   private IEnumerator ChestHitAnimation()
+   {
+      _animator.Play("Hit");
+      yield return new WaitForSeconds(0.2f);
+      _animator.Play("Idle");
+   }
+   
+   private IEnumerator ChestOpenAnimation()
+   {
+      _animator.Play("Open");
+      yield return new WaitForSeconds(0.6f);
+      ChestOpen();
    }
 
    private IEnumerator Respawn()

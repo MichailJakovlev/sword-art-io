@@ -19,11 +19,14 @@ public class RewardAd : MonoBehaviour, IRewardAd
     {
         switch (num)
         {
-            case 1:
-                // 1st award method
+            case 1: 
+                FindFirstObjectByType<CaseOpenAnimation>().Play();
+                FindFirstObjectByType<CaseOpener>().OpenCase();
+                FindFirstObjectByType<CaseScreeen>().HideUI();
                 break;
             case 2:
-                // 2st award method
+                FindFirstObjectByType<CoinCounter>().DubbleCoins();
+                FindFirstObjectByType<GameOverMenu>().Show(FindFirstObjectByType<Player>().score);
                 break;
             case 3:
                 // 3st award method

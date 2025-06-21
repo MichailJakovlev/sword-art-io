@@ -1,14 +1,34 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
+
 public class AddSwordItemSkin : MonoBehaviour
 {
     public List<GameObject> _skins = new List<GameObject>();
     public Player _player;
+    private GameConfig _gameConfig;
+    private ISaveData _saveData;
+    private string _skinName;
 
+    [Inject]
+    private void Construct(GameConfig gameConfig, ISaveData saveData)
+    {
+        _gameConfig = gameConfig;
+        _saveData = saveData;
+    }
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        switch (_player.skin)
+        _player = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Player>();
+        if (_player == null)
+        {
+            _skinName = MenuCurrentSkin._skinWeaponName;
+        }
+        else
+        {
+            _skinName = _player.skin;
+        }
+        
+        switch (_skinName)
         {
             case "Guts":
                 _skins[0].SetActive(true);

@@ -9,6 +9,7 @@ public class CaseScreeen : MonoBehaviour
 {
     [SerializeField] private GameObject returnButton;
     [SerializeField] private GameObject openCaseButton;
+    [SerializeField] private GameObject adButton;
     [SerializeField] private GameObject skinLot;
     [SerializeField] private GameObject caseImage;
     [SerializeField] private CanvasGroup openCaseAria;
@@ -41,12 +42,20 @@ public class CaseScreeen : MonoBehaviour
         }
     }
 
-    
+    public void Start()
+    {
+        if (PlayerPrefs.GetInt("Coins") < 100)
+        {
+            openCaseButton.GetComponent<Button>().interactable = false;
+        }
+    }
+
     private void OnEnable()
     {
         caseImage.SetActive(true);
         returnButton.SetActive(true);
         openCaseButton.SetActive(true);
+        adButton.SetActive(true);   
         skinLot.SetActive(false);
         skinLotImage.transform.localScale = new Vector3(0f, 0f, 0f);
     }
@@ -55,6 +64,7 @@ public class CaseScreeen : MonoBehaviour
     {
         returnButton.SetActive(false);
         openCaseButton.SetActive(false);
+        adButton.SetActive(false);
     }
 
     public void EndAnimation()
@@ -66,7 +76,7 @@ public class CaseScreeen : MonoBehaviour
         StartCoroutine(CoinTextAnimation());
         
     }
-
+    
     public void ButtonsShow(string lotSkinName)
     {
         if (JsonUtility.FromJson<SaveData.SkinData>(PlayerPrefs.GetString("skinData")).skins.Find(skin => skin.name == lotSkinName).isUnlocked == true)

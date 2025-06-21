@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1699177425579009451, guid: c9fa9f799dc84a84c977d808dcc7e843, type: 3}
+  m_Sprite: {fileID: 3517890258625692406, guid: c9fa9f799dc84a84c977d808dcc7e843, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 1915065981221035927}
   - component: {fileID: 1870496848568708760}
   - component: {fileID: 3677838968676507423}
+  - component: {fileID: 7224033944964014065}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -280,6 +281,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7224033944964014065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788410195673259968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dfea59cf50553429212b47b85bb434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u041F\u0420\u041E\u0414\u041E\u041B\u0416\u0418\u0422\u042C"
+  _en: CONTINUE
+  _tr: DEVAM ETMEK
+  _ar: "\u064A\u0643\u0645\u0644"
+  _ja: "\u7D9A\u304F"
+  _de: WEITERMACHEN
+  _es: CONTINUAR
+  _arFont: {fileID: 0}
+  _jaFont: {fileID: 0}
+  _currentLanguage: 
 --- !u!1 &2205178652059527235
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +314,7 @@ GameObject:
   - component: {fileID: 6561895784703099304}
   - component: {fileID: 7527999125315363949}
   - component: {fileID: 1899382924492039574}
+  - component: {fileID: 5123034281691569166}
   m_Layer: 5
   m_Name: Shadow
   m_TagString: Untagged
@@ -416,6 +440,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5123034281691569166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205178652059527235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dfea59cf50553429212b47b85bb434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u041C\u0415\u041D\u042E"
+  _en: MENU
+  _tr: "MEN\xDC"
+  _ar: "\u0642\u0627\u0626\u0645\u0629 \u0637\u0639\u0627\u0645"
+  _ja: "\u30E1\u30CB\u30E5\u30FC"
+  _de: SPEISEKARTE
+  _es: "MEN\xDA"
+  _arFont: {fileID: 0}
+  _jaFont: {fileID: 0}
+  _currentLanguage: 
 --- !u!1 &2880172937709904947
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3517890258625692406, guid: c9fa9f799dc84a84c977d808dcc7e843, type: 3}
+  m_Sprite: {fileID: -1699177425579009451, guid: c9fa9f799dc84a84c977d808dcc7e843, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1051,18 +1097,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 777597770455506083}
-        m_TargetAssemblyTypeName: UIHandler, Assembly-CSharp
-        m_MethodName: StopGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 4385451127959712087}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1207,8 +1241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _authRateGameButton: {fileID: 0}
   _rateGameButton: {fileID: 0}
-  _audioEnableButton: {fileID: 63823101918464946}
-  _audioDisableButton: {fileID: 6399246576509266190}
+  _audioEnableButton: {fileID: 6399246576509266190}
+  _audioDisableButton: {fileID: 63823101918464946}
 --- !u!1 &8067592996311704213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1254,7 @@ GameObject:
   - component: {fileID: 6167583232083402574}
   - component: {fileID: 8575097708327885713}
   - component: {fileID: 4259020070766770930}
+  - component: {fileID: 8424182901503865664}
   m_Layer: 5
   m_Name: Shadow
   m_TagString: Untagged
@@ -1345,6 +1380,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8424182901503865664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067592996311704213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dfea59cf50553429212b47b85bb434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u041F\u0420\u041E\u0414\u041E\u041B\u0416\u0418\u0422\u042C"
+  _en: CONTINUE
+  _tr: DEVAM ETMEK
+  _ar: "\u064A\u0643\u0645\u0644"
+  _ja: "\u7D9A\u304F"
+  _de: WEITERMACHEN
+  _es: CONTINUAR
+  _arFont: {fileID: 0}
+  _jaFont: {fileID: 0}
+  _currentLanguage: 
 --- !u!1 &8396618205480810996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1413,7 @@ GameObject:
   - component: {fileID: 678153062338423536}
   - component: {fileID: 4826800907568734504}
   - component: {fileID: 6540483589336127337}
+  - component: {fileID: 8821535286486677727}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1481,3 +1539,25 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8821535286486677727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396618205480810996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dfea59cf50553429212b47b85bb434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ru: "\u041C\u0415\u041D\u042E"
+  _en: MENU
+  _tr: "MEN\xDC"
+  _ar: "\u0642\u0627\u0626\u0645\u0629 \u0637\u0639\u0627\u0645"
+  _ja: "\u30E1\u30CB\u30E5\u30FC"
+  _de: SPEISEKARTE
+  _es: "MEN\xDA"
+  _arFont: {fileID: 0}
+  _jaFont: {fileID: 0}
+  _currentLanguage: 

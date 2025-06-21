@@ -42,6 +42,7 @@ public class UIHandler : MonoBehaviour
         if (authStatus == 1)
         {
             _isAuthed = true;
+            _leaderboard.Leaderboard.SetPlayerScore(PlayerPrefs.GetInt("playerScoreRecord"));
         }
     }
 

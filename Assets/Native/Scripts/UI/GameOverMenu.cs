@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -13,11 +14,13 @@ public class GameOverMenu : MonoBehaviour
    private CoinCounter _coinCounter;
    private Player _player;
    private SceneState _sceneState;
+   private Leaderboard _leaderboard;
    
    void Start()
    {
       _player = FindFirstObjectByType<Player>();
       _sceneState = FindFirstObjectByType<SceneState>();
+      _leaderboard = FindObjectOfType<Leaderboard>();
    }
 
    public void Show(int score)
@@ -29,7 +32,8 @@ public class GameOverMenu : MonoBehaviour
       _recordScoreShadow.text = _recordScoreText.text;
       _coinsText.text = _coinCounter.coins.ToString();
       _coinsShadow.text = _coinsText.text;
-
+      _leaderboard.SetPlayerScore(PlayerPrefs.GetInt("playerScoreRecord"));
+      StartCoroutine(CoinTextAnimation());
    }
    public void RespawnPlayer()
    {
@@ -39,5 +43,21 @@ public class GameOverMenu : MonoBehaviour
    public void ExitToMainMenu()
    {
       _sceneState.ToMenuScene();
+   }
+
+   private IEnumerator CoinTextAnimation()
+   {
+      for (int i = 0; i < 40; i++)
+      {   
+         _coinsText.fontSize  += 0.5f;
+         _coinsShadow.fontSize  += 0.5f;
+         yield return new WaitForSeconds(0.01f);
+      }
+      for (int i = 0; i < 40; i++)
+      {
+         _coinsText.fontSize  -= 0.5f;
+         _coinsShadow.fontSize  -= 0.5f;
+         yield return new WaitForSeconds(0.01f);
+      }
    }
 }
