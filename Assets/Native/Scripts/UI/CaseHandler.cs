@@ -13,6 +13,13 @@ public class CaseHandler : MonoBehaviour
     {
         _caseOpener = caseOpener;
     }
+
+    public void AddMoney()
+    {
+        int currentCoins = PlayerPrefs.GetInt("Coins");
+        currentCoins += 1000;
+        PlayerPrefs.SetInt("Coins", currentCoins);
+    }
     
     public void OpenCase()
     {

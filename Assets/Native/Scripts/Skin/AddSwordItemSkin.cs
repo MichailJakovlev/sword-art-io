@@ -26,6 +26,7 @@ public class AddSwordItemSkin : MonoBehaviour
         else
         {
             _skinName = _player.skin;
+            Debug.Log(_player.skin);
         }
         
         switch (_skinName)
@@ -62,6 +63,27 @@ public class AddSwordItemSkin : MonoBehaviour
                 break;
             case "Viking":
                 _skins[10].SetActive(true);
+                break;
+            case "Ekko":
+                _skins[11].SetActive(true);
+                break;
+            case "Cavalier":
+                _skins[12].SetActive(true);
+                break;
+            case "Aang":
+                _skins[13].SetActive(true);
+                break;
+            case "Witcher":
+                _skins[14].SetActive(true);
+                break;
+            case "Puss":
+                _skins[15].SetActive(true);
+                break;
+            case "Templar":
+                _skins[16].SetActive(true);
+                break;
+            case "Namu":
+                _skins[17].SetActive(true);
                 break;
         }
     }
