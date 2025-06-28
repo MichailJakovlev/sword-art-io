@@ -7,18 +7,14 @@ public class CaseHandler : MonoBehaviour
     private CanvasGroup _openCaseArea;
     public CaseOpenAnimation _caseOpenAnimation;
     public CaseScreeen _caseScreeen;
+    public MenuCoinView _menuCoinView;
+    private GameConfig _gameConfig;
     
     [Inject]
-    private void Cunstruct(ICaseOpener caseOpener)
+    private void Cunstruct(ICaseOpener caseOpener, GameConfig gameConfig)
     {
         _caseOpener = caseOpener;
-    }
-
-    public void AddMoney()
-    {
-        int currentCoins = PlayerPrefs.GetInt("Coins");
-        currentCoins += 1000;
-        PlayerPrefs.SetInt("Coins", currentCoins);
+        _gameConfig = gameConfig;
     }
     
     public void OpenCase()
@@ -29,7 +25,19 @@ public class CaseHandler : MonoBehaviour
             int currentCoins = PlayerPrefs.GetInt("Coins");
             currentCoins -= 100;
             PlayerPrefs.SetInt("Coins", currentCoins);
+            _menuCoinView.UpdateCoins();
         }
+    }
+
+    public void ReturnCoins()
+    { 
+        var skinLotCurrent = _gameConfig.SkinsSO.skinInfo.Find(skin => _caseOpener.CaseOpener.currentSkinLotName == skin.name.ToString());
+        var rarityInfo = _gameConfig.RaritySO.rarityInfo.Find(rarity => rarity.skinsRarity == skinLotCurrent.skinsRarity);
+        
+        int currentCoins = PlayerPrefs.GetInt("Coins");
+        currentCoins += rarityInfo.cost;
+        PlayerPrefs.SetInt("Coins", currentCoins);
+        _menuCoinView.UpdateCoins();
     }
     
     public void SetAlpha(int alpha)
