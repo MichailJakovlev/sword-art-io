@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -8,6 +9,18 @@ public class AudioState : MonoBehaviour, IAudioState
 
     private IAudioState _audioState;
     AudioState IAudioState.AudioState => this;
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetString("Audio") == "Enable")
+        {
+            AudioSwitch(true);
+        }
+        else
+        {
+            AudioSwitch(false);
+        }
+    }
 
     private void OnEnable()
     {
@@ -28,25 +41,27 @@ public class AudioState : MonoBehaviour, IAudioState
             _isEnableAuio = true;
             PlayerPrefs.SetString("Audio", "Enable");
             PlayerPrefs.Save();
+            StartAudio();
         }
         else
         {
             _isEnableAuio = false;
             PlayerPrefs.SetString("Audio", "Disable");
             PlayerPrefs.Save();
+            StopAudio();
         }
     }
 
     public void StopAudio()
     {
-        // AudioMixer Disable Method
+        _audioMixer.SetFloat("MasterVolume", -80f);
     }
 
     public void StartAudio()
     {
         if (_isEnableAuio)
         {
-            // AudioMixer Enable Method
+            _audioMixer.SetFloat("MasterVolume", 0f);
         }
     }
 }

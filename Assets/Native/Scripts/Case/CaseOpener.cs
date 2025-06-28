@@ -124,6 +124,13 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
 
         var endPosOfItem = (length - (skinLot - 1)) * (xGridCellSize + xGridSpacing);
 
+        Debug.Log(endPosOfItem);
+        
+        // if (endPosOfItem)
+        // {
+        //     
+        // }
+
         var minPos = (endPosOfItem - xGridCellSize - xGridSpacing + itemPadding) * -1;
         var maxPos = (endPosOfItem - xGridSpacing - itemPadding) * -1;
 
@@ -136,10 +143,11 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
         while (elapsed < _gameConfig.CaseSO.spinDuration)
         {
             elapsed += Time.deltaTime;
-
+    
             _grid.anchoredPosition = Vector2.SmoothDamp(_grid.anchoredPosition, targetPosition, ref velocity,
                 elapsed * _gameConfig.CaseSO.spinSmooth, _gameConfig.CaseSO.spinMaxSpeed,
                 Time.deltaTime * _gameConfig.CaseSO.spinSpeed);
+            Debug.Log(_grid.anchoredPosition);
 
             if (velocity == Vector2.zero)
             {
