@@ -22,7 +22,7 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     
     private GameObject _caseHandlerGo;
 
-    private string currentSkinLotName;
+    public string currentSkinLotName;
     
 
     private int skinLot = 7;
@@ -167,17 +167,14 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
         var rarityInfo = _gameConfig.RaritySO.rarityInfo.Find(rarity => rarity.skinsRarity == skinLotCurrent.skinsRarity);
         _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.costSellText.text = rarityInfo.cost.ToString();
         _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.costSellTextShadow.text = rarityInfo.cost.ToString();
+        
         var skinLotBackgroundAlpha = 0.4f;
         skinLotBackground.color = new Color(rarityInfo.color.r, rarityInfo.color.g, rarityInfo.color.b, skinLotBackground.color.a);
-
-        
         
         _caseHandlerGo.GetComponent<CaseHandler>()._caseOpenAnimation.caseOpenAnimator.Play("Empty State");
         
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.EndAnimation();
-
-        
         Debug.Log("animation stoped");
     }
 
