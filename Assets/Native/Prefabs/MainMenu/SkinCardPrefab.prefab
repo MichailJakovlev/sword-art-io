@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 3823825500157178721}
   - component: {fileID: 6266528844843614714}
   - component: {fileID: 302408868167098642}
+  - component: {fileID: 5999739585111790026}
   m_Layer: 5
   m_Name: SkinCardPrefab
   m_TagString: Untagged
@@ -441,6 +442,20 @@ MonoBehaviour:
   skinName: 
   selectorImage: {fileID: 3932343436368057179}
   lockedSkinImage: {fileID: 9200399187162235531}
+--- !u!114 &5999739585111790026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450527248555726010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6b71e838744d2fb3e1cac5613c7d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pressSound: {fileID: 0}
+  _hoverSound: {fileID: 0}
 --- !u!1 &6623529873760144567
 GameObject:
   m_ObjectHideFlags: 0

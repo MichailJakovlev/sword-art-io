@@ -3,8 +3,8 @@ using UnityEngine.EventSystems;
 
 public class ButtonHandler: MonoBehaviour, IPointerEnterHandler
 {
-    [SerializeField] private AudioSource _pressSound;
-    [SerializeField] private AudioSource _hoverSound;
+    public AudioSource _pressSound;
+    public AudioSource _hoverSound;
     
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
