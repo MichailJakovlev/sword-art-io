@@ -1,18 +1,27 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Zenject;
 
 public class ButtonHandler: MonoBehaviour, IPointerEnterHandler
 {
-    public AudioSource _pressSound;
-    public AudioSource _hoverSound;
+    private AudioSource _pressSound;
+    private AudioSource _hoverSound;
+    
+    private AudioData _audioData;
+    
+    [Inject]
+    private void Construct(AudioData audioData)
+    {
+        _audioData = audioData;
+    }
     
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        _hoverSound.Play();
+        _audioData.buttonHoverSound.Play();
     }
 
     public void OnClickSound()
     {
-        _pressSound.Play(); 
+        _audioData.buttonPressSound.Play();
     }
 }
