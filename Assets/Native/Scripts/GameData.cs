@@ -1,8 +1,6 @@
-﻿using Unity.Android.Gradle.Manifest;
-
-public static class GameData
+﻿public static class GameData
 {
-    private static int enemyAmount = 10;
+    private static int enemyAmount = 0;
     private static int swordAddItemCount = 20;
     private static int healItemCount = 3;
     private static int moveSpeedItemCount = 3;

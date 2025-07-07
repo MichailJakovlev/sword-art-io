@@ -8715,6 +8715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coinText: {fileID: 4002141770524707808}
   _coinShadowText: {fileID: 4644216223776465883}
+  _caseScreeen: {fileID: 6767460610425144422}
 --- !u!1 &6992579613389192122
 GameObject:
   m_ObjectHideFlags: 0
