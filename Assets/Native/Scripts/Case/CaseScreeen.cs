@@ -44,8 +44,8 @@ public class CaseScreeen : MonoBehaviour
 
     public void CheckCoins()
     {
-        // if (PlayerPrefs.GetInt("Coins") < 100)
-        if (PlayerPrefs.GetInt("Coins") < 0)
+        if (PlayerPrefs.GetInt("Coins") < 100)
+        // if (PlayerPrefs.GetInt("Coins") < 0)
         {
             openCaseButton.GetComponent<Button>().interactable = false;
         }
