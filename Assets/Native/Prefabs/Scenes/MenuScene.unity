@@ -550,6 +550,7 @@ MonoBehaviour:
   _backgroundMenuScene: {fileID: -5701820218677104695, guid: 3e78fdee915ffd2498755c100cb671f2, type: 3}
   _saveData: {fileID: 1871242885905066129, guid: 428bb8b39b8f7774194811e95af42f03, type: 3}
   _inventory: {fileID: -2869870549793489877, guid: 1f03f24dd55a69a4fb821c935f6fa69e, type: 3}
+  _audioData: {fileID: 1893262075995120216, guid: 6a66aa758631f7c4e9d268a96583908d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

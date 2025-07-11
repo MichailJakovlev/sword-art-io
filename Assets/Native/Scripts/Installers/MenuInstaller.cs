@@ -16,9 +16,10 @@ public class MenuInstaller : MonoInstaller
     [SerializeField] private UISwitcher _uiSwitcher;
     [SerializeField] private CaseOpener _caseOpener;
     [SerializeField] private BackgroundMenuScene _backgroundMenuScene;
-
     [SerializeField] private SaveData _saveData;
     [SerializeField] private Inventory _inventory;
+    
+    [SerializeField] private AudioData _audioData;
 
     public override void InstallBindings()
     {
@@ -27,6 +28,9 @@ public class MenuInstaller : MonoInstaller
 
         GameState gameState = Container.InstantiatePrefabForComponent<GameState>(_gameState, _gameState.transform.position, Quaternion.identity, null);
         Container.Bind<IGameState>().To<GameState>().FromInstance(gameState).AsSingle();
+        
+        AudioData audioData = Container.InstantiatePrefabForComponent<AudioData>(_audioData, _audioData.transform.position, Quaternion.identity, null);
+        Container.Bind<AudioData>().FromInstance(audioData).AsSingle();
 
         SceneState sceneState = Container.InstantiatePrefabForComponent<SceneState>(_sceneState, _sceneState.transform.position, Quaternion.identity, null);
         Container.Bind<ISceneState>().To<SceneState>().FromInstance(sceneState).AsSingle();
@@ -62,5 +66,6 @@ public class MenuInstaller : MonoInstaller
         Container.Bind<IBackgroundMenuScene>().To<BackgroundMenuScene>().FromInstance(BackgroundMenuScene).AsSingle();
 
         UISwitcher uiSwitcher = Container.InstantiatePrefabForComponent<UISwitcher>(_uiSwitcher, _uiSwitcher.transform.position, Quaternion.identity, null);
+        
     }
 }

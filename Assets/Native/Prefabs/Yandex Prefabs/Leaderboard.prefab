@@ -195,7 +195,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &4835148453678886966
@@ -283,8 +283,8 @@ MonoBehaviour:
   _ja: "\u540D\u524D"
   _de: NAME
   _es: NOMBRE
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &2321438851225308619
 GameObject:
@@ -354,7 +354,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: SCORE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &9033233199439633919
@@ -442,8 +442,8 @@ MonoBehaviour:
   _ja: "\u30B9\u30B3\u30A2"
   _de: PUNKTZAHL
   _es: PUNTAJE
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &2805709714124262082
 GameObject:
@@ -628,7 +628,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rank
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2339880532966385435
@@ -716,8 +716,8 @@ MonoBehaviour:
   _ja: "\u30E9\u30F3\u30AF"
   _de: RANG
   _es: RANGO
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &6216796596783208234
 GameObject:
@@ -940,7 +940,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rank
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2313538082085226602
@@ -1028,8 +1028,8 @@ MonoBehaviour:
   _ja: "\u30E9\u30F3\u30AF"
   _de: RANG
   _es: RANGO
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &7860533399394390933
 GameObject:
@@ -1099,7 +1099,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: SCORE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &7602227426725966156
@@ -1187,8 +1187,8 @@ MonoBehaviour:
   _ja: "\u30B9\u30B3\u30A2"
   _de: PUNKTZAHL
   _es: PUNTAJE
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &8597691476071733496
 GameObject:
@@ -1295,7 +1295,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2312830609311583808
@@ -1383,8 +1383,8 @@ MonoBehaviour:
   _ja: "\u540D\u524D"
   _de: NAME
   _es: NOMBRE
-  _arFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
-  _jaFont: {fileID: 11400000, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
   _currentLanguage: 
 --- !u!1 &8963502450833583424
 GameObject:
@@ -1398,6 +1398,7 @@ GameObject:
   - component: {fileID: 7085680965229885740}
   - component: {fileID: 8643259307918016718}
   - component: {fileID: 2827310009369386475}
+  - component: {fileID: 4124958423279694839}
   m_Layer: 5
   m_Name: Close Button
   m_TagString: Untagged
@@ -1452,7 +1453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6086679768607584268, guid: 0c649fceb8f501541b8aa724b1f42035, type: 3}
+  m_Sprite: {fileID: 8847482500668211141, guid: c9fa9f799dc84a84c977d808dcc7e843, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1506,6 +1507,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4124958423279694839}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
+        m_MethodName: OnClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1431256720340514322}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1518,3 +1531,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4124958423279694839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963502450833583424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6b71e838744d2fb3e1cac5613c7d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

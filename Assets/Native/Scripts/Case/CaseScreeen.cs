@@ -11,8 +11,8 @@ public class CaseScreeen : MonoBehaviour
     [SerializeField] private GameObject openCaseButton;
     [SerializeField] private GameObject adButton;
     [SerializeField] private GameObject skinLot;
-    [SerializeField] private GameObject caseImage;
     [SerializeField] private CanvasGroup openCaseAria;
+    [SerializeField] private CanvasGroup caseImageAlpha;
     
     [SerializeField] private GameObject sellSkinButton;
     [SerializeField] private GameObject inventoryButton;
@@ -28,16 +28,11 @@ public class CaseScreeen : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             skinLotImage.transform.localScale  += new Vector3(0.2f, 0.2f, 0f);
-            // skinLotBackground.color += new Color(0,0,0,0.01f);
-            // _coinShadowText.fontSize  += 1f;
             yield return new WaitForSeconds(0.01f);
         }
 
         for (int i = 0; i < 20; i++)
         {
-            // _coinText.fontSize  -= 1f;
-            // _coinShadowText.fontSize  -= 1f;
-            // skinLotBackground.color -= new Color(0,0,0,0.01f);
             yield return new WaitForSeconds(0.01f);
         }
     }
@@ -61,7 +56,7 @@ public class CaseScreeen : MonoBehaviour
 
     private void OnEnable()
     {
-        caseImage.SetActive(true);
+        caseImageAlpha.alpha = 1;
         returnButton.SetActive(true);
         openCaseButton.SetActive(true);
         adButton.SetActive(true);   
@@ -78,10 +73,9 @@ public class CaseScreeen : MonoBehaviour
 
     public void EndAnimation()
     {
-        returnButton.SetActive(true);
         openCaseAria.alpha = 0;
+        caseImageAlpha.alpha = 0;
         skinLot.SetActive(true);
-        caseImage.SetActive(false);
         StartCoroutine(CoinTextAnimation());
         
     }

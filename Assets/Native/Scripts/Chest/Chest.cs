@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class Chest : MonoBehaviour
 {
@@ -9,7 +10,15 @@ public class Chest : MonoBehaviour
    [SerializeField] private Animator _animator;
    private Collider _collider;
    private int _health = 10;
+   private bool _isPlayer = false;
    
+   private AudioData _audioData;
+    
+   [Inject]
+   private void Construct(AudioData audioData)
+   {
+      _audioData = audioData;
+   }
 
    void Start()
    {
@@ -21,6 +30,21 @@ public class Chest : MonoBehaviour
       _collider = GetComponent<Collider>();
 
    }
+
+   public void PlayAudio()
+   {
+      _isPlayer = true;
+      if (_health >= 1)
+      {
+         _audioData.hitSound.pitch = Random.Range(0.9f, 1.1f);
+         _audioData?.hitSound.Play();
+      }
+      // if (_health <= 0)
+      // {
+      //    _audioData.openChestSound.Play();
+      // }
+      
+   }
    
    private void OnCollisionEnter(Collision collision)
    {
@@ -30,6 +54,11 @@ public class Chest : MonoBehaviour
          _health--;
          if (_health <= 0)
          {
+            if (_isPlayer)
+            {
+               _audioData.openChestSound.Play();
+               _isPlayer = false;
+            }
             _collider.enabled = false;
             StopAllCoroutines();
             StartCoroutine(ChestOpenAnimation());

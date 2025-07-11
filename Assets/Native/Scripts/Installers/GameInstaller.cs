@@ -19,6 +19,8 @@ public class GameInstaller : MonoInstaller
     [SerializeField] private EnemyPool _enemyPool;
     [SerializeField] private ItemPool _itemPool;
     
+    [SerializeField] private AudioData _audioData;
+    
     public override void InstallBindings()
          {
              Application.targetFrameRate = 1000;
@@ -29,6 +31,9 @@ public class GameInstaller : MonoInstaller
 
         GameState gameState = Container.InstantiatePrefabForComponent<GameState>(_gameState, _gameState.transform.position, Quaternion.identity, null);
         Container.Bind<IGameState>().To<GameState>().FromInstance(gameState).AsSingle();
+        
+        AudioData audioData = Container.InstantiatePrefabForComponent<AudioData>(_audioData, _audioData.transform.position, Quaternion.identity, null);
+        Container.Bind<AudioData>().FromInstance(audioData).AsSingle();
 
         SceneState sceneState = Container.InstantiatePrefabForComponent<SceneState>(_sceneState, _sceneState.transform.position, Quaternion.identity, null);
         Container.Bind<ISceneState>().To<SceneState>().FromInstance(sceneState).AsSingle();

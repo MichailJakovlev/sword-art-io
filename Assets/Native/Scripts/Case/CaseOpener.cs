@@ -11,6 +11,7 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     CaseOpener ICaseOpener.CaseOpener => this;
     private GameConfig _gameConfig;
     private ISaveData _saveData;
+    private AudioData _audioData;
 
     private Vector2 targetPosition;
     private RectTransform _grid;
@@ -30,10 +31,11 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     private bool firstEnabledFlag = false;
 
     [Inject]
-    private void Construct(GameConfig gameConfig, ISaveData saveData)
+    private void Construct(GameConfig gameConfig, ISaveData saveData, AudioData audioData)
     {
         _gameConfig = gameConfig;
         _saveData = saveData;
+        _audioData = audioData;
     }
 
     private void Start()
@@ -111,53 +113,74 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
     }
 
     private IEnumerator SpinAnimation()
-    {
-        yield return new WaitForSeconds(1f);
-        _caseHandler.SetAlpha(1);
+{
+    yield return new WaitForSeconds(1f);
+    _caseHandler.SetAlpha(1);
 
-        int itemPadding = 5;
-        float elapsed = 0f;
-        var xGridCellSize = _grid.GetComponent<GridLayoutGroup>().cellSize.x;
-        var xGridSpacing = _grid.GetComponent<GridLayoutGroup>().spacing.x;
-        var length = caseItems.Count;
-        Vector2 velocity = Vector2.zero;
-
-        var endPosOfItem = (length - (skinLot - 1)) * (xGridCellSize + xGridSpacing);
-
-        Debug.Log(endPosOfItem);
-        
-        // if (endPosOfItem)
-        // {
-        //     
-        // }
-
-        var minPos = (endPosOfItem - xGridCellSize - xGridSpacing + itemPadding) * -1;
-        var maxPos = (endPosOfItem - xGridSpacing - itemPadding) * -1;
-
-        // Debug.Log(minPos + " : " + maxPos);
-
-        targetPosition = new(UnityEngine.Random.Range(minPos, maxPos) + _grid.rect.width / 2, 0);
-
-        // Debug.Log(targetPosition.x);
-
-        while (elapsed < _gameConfig.CaseSO.spinDuration)
-        {
-            elapsed += Time.deltaTime;
+    // Get viewport reference and center position
+    RectTransform viewport = (RectTransform)_grid.parent;
+    float centerX = viewport.rect.width / 2f;
     
-            _grid.anchoredPosition = Vector2.SmoothDamp(_grid.anchoredPosition, targetPosition, ref velocity,
-                elapsed * _gameConfig.CaseSO.spinSmooth, _gameConfig.CaseSO.spinMaxSpeed,
-                Time.deltaTime * _gameConfig.CaseSO.spinSpeed);
-            Debug.Log(_grid.anchoredPosition);
+    int itemPadding = 5;
+    float elapsed = 0f;
+    var gridLayout = _grid.GetComponent<GridLayoutGroup>();
+    float xGridCellSize = gridLayout.cellSize.x;
+    float xGridSpacing = gridLayout.spacing.x;
+    var length = caseItems.Count;
+    Vector2 velocity = Vector2.zero;
 
-            if (velocity == Vector2.zero)
+    var endPosOfItem = (length - (skinLot - 1)) * (xGridCellSize + xGridSpacing);
+    var minPos = (endPosOfItem - xGridCellSize - xGridSpacing + itemPadding) * -1;
+    var maxPos = (endPosOfItem - xGridSpacing - itemPadding) * -1;
+    targetPosition = new Vector2(UnityEngine.Random.Range(minPos, maxPos) + _grid.rect.width / 2, 0);
+
+    float stepSize = xGridCellSize + xGridSpacing + itemPadding;
+    float lastBoundary = 0f;
+    
+    // Calculate initial boundary position
+    float initialPos = centerX - _grid.anchoredPosition.x;
+    float lastBoundaryIndex = Mathf.Floor(initialPos / stepSize);
+
+    while (elapsed < _gameConfig.CaseSO.spinDuration)
+    {
+        elapsed += Time.deltaTime;
+        
+        Vector2 prevPosition = _grid.anchoredPosition;
+        
+        _grid.anchoredPosition = Vector2.SmoothDamp(
+            prevPosition, 
+            targetPosition, 
+            ref velocity,
+            _gameConfig.CaseSO.spinSmooth, 
+            _gameConfig.CaseSO.spinMaxSpeed,
+            Time.deltaTime * _gameConfig.CaseSO.spinSpeed
+        );
+
+        // Calculate current boundary position
+        float currentPos = centerX - _grid.anchoredPosition.x;
+        float currentBoundaryIndex = Mathf.Floor(currentPos / stepSize);
+        
+        // Check for boundary crossings
+        if (currentBoundaryIndex != lastBoundaryIndex)
+        {
+            int boundariesCrossed = Mathf.Abs((int)(currentBoundaryIndex - lastBoundaryIndex));
+            
+            for (int i = 0; i < boundariesCrossed; i++)
             {
-                elapsed = _gameConfig.CaseSO.spinDuration;
+                _audioData.caserollSound.Play();
             }
-
-            yield return null;
+            
+            lastBoundaryIndex = currentBoundaryIndex;
         }
 
-        _grid.anchoredPosition = targetPosition;
+        if (velocity.sqrMagnitude < 0.2f)
+        {
+            elapsed = _gameConfig.CaseSO.spinDuration;
+        }
+        yield return null;
+    }
+
+    _grid.anchoredPosition = targetPosition;
 
         var skinLotCurrent = _gameConfig.SkinsSO.skinInfo.Find(skin => currentSkinLotName == skin.name.ToString());
         
@@ -171,10 +194,10 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
         var skinLotBackgroundAlpha = 0.4f;
         skinLotBackground.color = new Color(rarityInfo.color.r, rarityInfo.color.g, rarityInfo.color.b, skinLotBackground.color.a);
         
-        _caseHandlerGo.GetComponent<CaseHandler>()._caseOpenAnimation.caseOpenAnimator.Play("Empty State");
         
         yield return new WaitForSeconds(0.1f);
         _caseHandlerGo.GetComponent<CaseHandler>()._caseScreeen.EndAnimation();
+        _caseHandlerGo.GetComponent<CaseHandler>()._caseOpenAnimation.caseOpenAnimator.Play("Empty State");
         Debug.Log("animation stoped");
     }
 

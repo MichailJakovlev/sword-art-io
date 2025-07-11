@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class Health : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class Health : MonoBehaviour
     private ScoreView _scoreView;
     private GameOverMenu _gameOverMenu;
     
+    private AudioData _audioData;
+    
+    [Inject]
+    private void Construct(AudioData audioData)
+    {
+        _audioData = audioData;
+    }
 
     private void Awake()
     {
@@ -21,12 +29,23 @@ public class Health : MonoBehaviour
         _animations = GetComponent<Animations>();
         _scorable = GetComponent<IScorable>();
         _gameOverMenu = FindFirstObjectByType<GameOverMenu>();
+        _audioData = FindFirstObjectByType<AudioData>();
     }
 
     public void TakeDamage()
     {
         _healthValue -= 1;
         _healthSlider.value = _healthValue;
+
+        if (gameObject.tag == "Player")
+        {
+            if (_audioData != null)
+            {
+                _audioData.hitSound.pitch = Random.Range(0.9f, 1.1f);
+                _audioData?.hitSound.Play();
+            }
+        }
+        
         if (_healthValue <= 0)
         {
             _animations.Death();

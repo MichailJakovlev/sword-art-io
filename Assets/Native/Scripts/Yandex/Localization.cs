@@ -22,7 +22,9 @@ public class Localization : MonoBehaviour
 
     public void Start()
     {
-        _currentLanguage = GetLang();
+        // _currentLanguage = GetLang();
+        // _currentLanguage = "es";
+        //_currentLanguage = "en";
 
         // Russian
         if (_currentLanguage == "ru")
