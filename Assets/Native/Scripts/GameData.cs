@@ -1,4 +1,3 @@
-﻿
 public static class GameData
 {
     private static int enemyAmount = 10;
