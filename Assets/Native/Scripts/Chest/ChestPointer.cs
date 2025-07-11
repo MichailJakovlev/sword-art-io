@@ -4,7 +4,7 @@ public class ChestPointer : MonoBehaviour
 {
     private Transform _player;
     [SerializeField] private Camera _camera;
-    [SerializeField] private Transform _pointerIcon;
+    [SerializeField] public Transform _pointerIcon;
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class ChestPointer : MonoBehaviour
             case 2:
                 return Quaternion.Euler(0, 0, 180f);
             case 3:
-                return Quaternion.Euler(0, 0, 180f);
+                return Quaternion.Euler(0, 0, 0f);
             default:
                 return Quaternion.identity;
         }

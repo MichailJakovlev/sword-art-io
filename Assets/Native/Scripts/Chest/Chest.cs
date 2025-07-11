@@ -8,11 +8,13 @@ public class Chest : MonoBehaviour
    [SerializeField] private List<CoinDroper> _coinDropers;
    [SerializeField] private GameObject _chestSprite;
    [SerializeField] private Animator _animator;
+   [SerializeField] private GameObject _chestPointer;
    private Collider _collider;
    private int _health = 10;
    private bool _isPlayer = false;
    
    private AudioData _audioData;
+   
     
    [Inject]
    private void Construct(AudioData audioData)
@@ -28,7 +30,7 @@ public class Chest : MonoBehaviour
          coinDroper.gameObject.SetActive(false);
       }
       _collider = GetComponent<Collider>();
-
+      
    }
 
    public void PlayAudio()
@@ -39,11 +41,6 @@ public class Chest : MonoBehaviour
          _audioData.hitSound.pitch = Random.Range(0.9f, 1.1f);
          _audioData?.hitSound.Play();
       }
-      // if (_health <= 0)
-      // {
-      //    _audioData.openChestSound.Play();
-      // }
-      
    }
    
    private void OnCollisionEnter(Collision collision)
@@ -54,6 +51,7 @@ public class Chest : MonoBehaviour
          _health--;
          if (_health <= 0)
          {
+            _chestPointer.SetActive(false);
             if (_isPlayer)
             {
                _audioData.openChestSound.Play();
@@ -98,5 +96,6 @@ public class Chest : MonoBehaviour
       _health = 10;
       _chestSprite.SetActive(true);
       _collider.enabled = true;
+      _chestPointer.SetActive(true);
    }
 }
