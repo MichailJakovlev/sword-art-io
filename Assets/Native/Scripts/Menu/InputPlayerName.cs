@@ -1,4 +1,5 @@
 using System;
+using ModestTree;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -39,18 +40,22 @@ public class InputPlayerName : MonoBehaviour
     {
         _textArea.SetActive(true);
         _nameText.gameObject.SetActive(false);
-        Debug.Log("select");
     }
     
     public void onDeselect()
     {
-        PlayerPrefs.SetString("playerName", _inputPlayerName.text);
-        PlayerPrefs.Save();
-        _nameText.text = _inputPlayerName.text;
+        if (string.IsNullOrWhiteSpace(_inputPlayerName.text))
+        {
+            _inputPlayerName.text = _nameText.text;
+        }
+        else
+        {
+            PlayerPrefs.SetString("playerName", _inputPlayerName.text);
+            PlayerPrefs.Save();
+            _nameText.text = _inputPlayerName.text;
+        }
         _textArea.SetActive(false);
         _nameText.gameObject.SetActive(true);
-        
-        Debug.Log("deselect");
     }
 
 }

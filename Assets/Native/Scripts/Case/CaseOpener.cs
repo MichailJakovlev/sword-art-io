@@ -172,10 +172,14 @@ public class CaseOpener : MonoBehaviour, ICaseOpener
             
             lastBoundaryIndex = currentBoundaryIndex;
         }
-
-        if (velocity.sqrMagnitude < 0.2f)
+        
+        var anchoredPositionX = Mathf.FloorToInt(Math.Abs(_grid.anchoredPosition.x));
+        var targetPositionX = Mathf.FloorToInt(Math.Abs(targetPosition.x));
+        
+        if (anchoredPositionX >= targetPositionX - 1)
         {
             elapsed = _gameConfig.CaseSO.spinDuration;
+            Debug.Log("elapsed final: " + elapsed);
         }
         yield return null;
     }

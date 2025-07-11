@@ -106,8 +106,11 @@ public class Inventory : MonoBehaviour, IInventory
             if (currentSkinData.isUnlocked == true)
             {
                 var button = newElement.AddComponent<Button>();
+                var handler = button.GetComponent<ButtonHandler>();
+                handler.enabled = true;
                 button.onClick.AddListener(() => _saveData.SaveData.SelectSkin(skin.name.ToString()));
                 button.onClick.AddListener(() => ShowSelectedSkin());
+                button.onClick.AddListener(() => handler.OnClickSound());
             }
             
             RarityInfo skinRarity =
@@ -175,9 +178,12 @@ public class Inventory : MonoBehaviour, IInventory
                     button = _gridInventory.GetChild(i).AddComponent<Button>();
                 }
                 button.onClick.RemoveAllListeners();
+                var handler = button.GetComponent<ButtonHandler>();
+                handler.enabled = true;
                 _gridInventory.GetChild(i).GetComponent<SkinCardData>().lockedSkinImage.SetActive(false);
                 button.onClick.AddListener(() => _saveData.SaveData.SelectSkin(skin.name.ToString()));
                 button.onClick.AddListener(() => ShowSelectedSkin());
+                button.onClick.AddListener(() => handler.OnClickSound());
             }
         }
     }

@@ -143,7 +143,7 @@ MonoBehaviour:
   m_text: '?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
-  m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_sharedMaterial: {fileID: 6669959761950095220, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_text: '?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
-  m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_sharedMaterial: {fileID: 6669959761950095220, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 3823825500157178721}
   - component: {fileID: 6266528844843614714}
   - component: {fileID: 302408868167098642}
+  - component: {fileID: 7091592402845028646}
   m_Layer: 5
   m_Name: SkinCardPrefab
   m_TagString: Untagged
@@ -441,6 +442,18 @@ MonoBehaviour:
   skinName: 
   selectorImage: {fileID: 3932343436368057179}
   lockedSkinImage: {fileID: 9200399187162235531}
+--- !u!114 &7091592402845028646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450527248555726010}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6b71e838744d2fb3e1cac5613c7d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6623529873760144567
 GameObject:
   m_ObjectHideFlags: 0

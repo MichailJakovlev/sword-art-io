@@ -14,6 +14,11 @@ public class ButtonHandler: MonoBehaviour, IPointerEnterHandler
     {
         _audioData = audioData;
     }
+
+    private void Start()
+    {
+        _audioData = FindFirstObjectByType<AudioData>();
+    }
     
     public void OnPointerEnter(PointerEventData pointerEventData)
     {

@@ -154,7 +154,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 26
+      y: 32
       width: 21
       height: 23
     spriteID: 42ef8ad1b3ae9134c83cd6cd28a7945f
@@ -175,7 +175,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 27
-      y: 28
+      y: 34
       width: 20
       height: 21
     spriteID: e03b1caf800580948aecf4ed1954ae9e
@@ -196,7 +196,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 50
-      y: 11
+      y: 17
       width: 30
       height: 31
     spriteID: 076e1f5d76e3e8d428951e1ecaf5137e
@@ -217,7 +217,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 5
-      y: 4
+      y: 10
       width: 19
       height: 19
     spriteID: 07b50c65c6eb1574fbce6250b1cc2f73
@@ -238,10 +238,31 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 28
-      y: 6
+      y: 12
       width: 15
       height: 15
     spriteID: 3d0115b9c7babf341aefa7061396ed4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: gameui-icons_arrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 4
+      width: 14
+      height: 11
+    spriteID: 0e330741937b4cb4c8b49dca43bafeab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -268,9 +289,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 25
-        y: 16
+        y: 10
         width: 76
-        height: 45
+        height: 51
       spriteId: 21af05622b061964c9a83f19faa3e7dc
     linkedCells: []
     parentIndex: -1
