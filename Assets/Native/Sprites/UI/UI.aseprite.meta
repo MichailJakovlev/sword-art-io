@@ -145,7 +145,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: UI_23
+  - name: UI_bronze-coin
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -154,7 +154,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 34
+      y: 32
       width: 16
       height: 16
     spriteID: 606ba6444d2ea6a488672ff709ea0dbd
@@ -175,31 +175,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 42
+      y: 40
       width: 24
       height: 6
     spriteID: c114ef31b7b8faf42bef47b77d7dad53
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: UI_25
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 24
-      y: 13
-      width: 24
-      height: 9
-    spriteID: 5d992afb7f6e2cc419ccf4807ca8b353
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -217,7 +196,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 35
+      y: 33
       width: 24
       height: 6
     spriteID: 60961ef78cdd9b645a1b08b95c7d6633
@@ -229,7 +208,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: UI_28
+  - name: UI_silver-coin
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -237,10 +216,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 24
+      x: 27
       y: 4
-      width: 24
-      height: 8
+      width: 16
+      height: 16
     spriteID: 315e3ddfe6f19ed44b5b0e0c52119bb3
     spriteBone: []
     spriteOutline: []
@@ -259,7 +238,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 16
+      y: 13
       width: 16
       height: 16
     spriteID: fa72ca18eea95434d9a5a49c5ea446a5
@@ -280,7 +259,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 29
+      y: 27
       width: 24
       height: 5
     spriteID: ad2080a8275c2a641a6b7551a278b6fe
@@ -301,7 +280,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 23
+      y: 21
       width: 24
       height: 5
     spriteID: 153d40b6c613a95438459288bca4d568
@@ -331,9 +310,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 1
-        y: 1
+        y: 3
         width: 44
-        height: 46
+        height: 44
       spriteId: 286b33d8598370646af5984be72bb1c5
     linkedCells: []
     parentIndex: -1

@@ -24,7 +24,7 @@ public class CaseHandler : MonoBehaviour
         {
             _caseOpener.CaseOpener.OpenCase();
             int currentCoins = PlayerPrefs.GetInt("Coins");
-            // currentCoins -= 100;
+            currentCoins -= 100;
             PlayerPrefs.SetInt("Coins", currentCoins);
             _menuCoinView.UpdateCoins();
         }

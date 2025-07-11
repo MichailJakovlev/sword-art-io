@@ -12,7 +12,7 @@ public class FullscreenAd: MonoBehaviour, IFullscreenAd
 
     private void Start()
     {
-       // ShowFullscreenAd();
+       //gg ShowFullscreenAd();
     }
 
     public void ShowFullscreenAd()
