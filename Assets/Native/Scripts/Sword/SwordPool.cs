@@ -93,10 +93,9 @@ public class SwordPool : MonoBehaviour, ISwordPool
 
     public void RealizeAll()
     {
-        int realizeCount = _iterator;
-        for (int i = 0; i < realizeCount; i++)
+        for (int i = 0; i < _swordCount; i++)
         {
-            Realize(swordArray[i]);
+            swordArray[i].gameObject.SetActive(false);
         }
 
         _iterator = 1;

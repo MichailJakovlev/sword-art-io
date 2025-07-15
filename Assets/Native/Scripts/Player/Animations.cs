@@ -10,6 +10,7 @@ public class Animations : MonoBehaviour
     private Player _player;
     private bool isAnimationBusy = false;
     private PlayerMovement _playerMovement;
+    private SwordPool _swordPool;
     
     private void Awake()
     {
@@ -27,6 +28,11 @@ public class Animations : MonoBehaviour
             _player = GetComponent<Player>();
             _playerMovement = GetComponent<PlayerMovement>();
         }
+    }
+
+    void Start()
+    {
+        _swordPool = GetComponentInChildren<SwordPool>();
     }
 
     public void Move()  
@@ -54,6 +60,7 @@ public class Animations : MonoBehaviour
 
     public void Death()
     {
+        _swordPool.RealizeAll();
         isAnimationBusy = true;
         StopAllCoroutines();
         StartCoroutine(DeathAnim());

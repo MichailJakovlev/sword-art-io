@@ -13,6 +13,7 @@ public class Player : MonoBehaviour, IPlayer, IScorable
     private Collider _collider;
     private SpriteRenderer _spriteRenderer;
     private CoinCounter _coinCounter;
+    private ScoreView _scoreView;
    
     
     public int score { get; set; }
@@ -31,13 +32,14 @@ public class Player : MonoBehaviour, IPlayer, IScorable
         _gameOverMenu?.gameObject.SetActive(false);
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _coinCounter = FindObjectOfType<CoinCounter>();
+        _scoreView = FindObjectOfType<ScoreView>();
     }
     
     public void Death()
     {
         _nameUI.SetActive(false);
         _shadow.SetActive(false);
-        _swordPool.RealizeAll();
+        _gameOverMenu._scoreCanvas.targetDisplay = 1;
         _spriteRenderer.gameObject.SetActive(false);
         _gameOverMenu.gameObject.SetActive(true);
     }
@@ -55,5 +57,7 @@ public class Player : MonoBehaviour, IPlayer, IScorable
         transform.position = new Vector3(UnityEngine.Random.Range(GameData.X * -1 + 15, GameData.X - 15), 0, UnityEngine.Random.Range(GameData.Z * -1 + 15, GameData.Z - 15));
         _swordPool.Get();
         _collider.enabled = true;
+        _gameOverMenu._scoreCanvas.targetDisplay = 0;
+        _scoreView.PlayerScoreClean();
     }
 }

@@ -10,6 +10,7 @@ public class GameOverMenu : MonoBehaviour
    [SerializeField] private TextMeshProUGUI _recordScoreShadow;
    [SerializeField] private TextMeshProUGUI _coinsText;
    [SerializeField] private TextMeshProUGUI _coinsShadow;
+   public Canvas _scoreCanvas;
   
    private CoinCounter _coinCounter;
    private Player _player;

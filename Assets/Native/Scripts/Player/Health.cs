@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         _gameOverMenu = FindFirstObjectByType<GameOverMenu>();
         _audioData = FindFirstObjectByType<AudioData>();
     }
-
+    
     public void TakeDamage()
     {
         _healthValue -= 1;

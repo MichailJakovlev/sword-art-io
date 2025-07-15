@@ -30,8 +30,11 @@ public class Sword : MonoBehaviour
         {
             _particleSystem.Play();
             _swordPull.Realize(gameObject);
-            _audioData.swordBreakSound.pitch = Random.Range(0.9f, 1.1f);
-            _audioData.swordBreakSound.Play();
+            if (_audioData)
+            {
+                _audioData.swordBreakSound.pitch = Random.Range(0.9f, 1.1f);
+                _audioData.swordBreakSound.Play();
+            }
         }
         else if(collision.collider.layerOverridePriority == 2)
         { 

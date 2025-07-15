@@ -111,4 +111,10 @@ public class ScoreView : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
     }
+
+    public void PlayerScoreClean()
+    {
+        _playerScoreText.text = "0";
+        _playerScoreShadowText.text = "0";
+    }
 }
