@@ -2471,6 +2471,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9037132422944929469, guid: cd271e29b6121234faf954338f5a580e, type: 3}
+        m_TargetAssemblyTypeName: EventBus, Assembly-CSharp
+        m_MethodName: StopGameEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7720779437955125288}
         m_TargetAssemblyTypeName: UIHandler, Assembly-CSharp
         m_MethodName: ShowRewardAd
@@ -6541,7 +6553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3187873614324129921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11113,7 +11125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2618530126006249751
 RectTransform:
   m_ObjectHideFlags: 0

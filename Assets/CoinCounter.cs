@@ -8,11 +8,11 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _coinShadowText;
     public int coins = 0;
 
-    public void AddCoin()
+    public void AddCoin(int amount)
     {
-        coins++;
+        coins += amount;
         int genericCoins = PlayerPrefs.GetInt("Coins");
-        genericCoins++;
+        genericCoins += amount;
         PlayerPrefs.SetInt("Coins", genericCoins);
         StartCoroutine(CoinTextAnimation());
         _coinText.text = coins.ToString();

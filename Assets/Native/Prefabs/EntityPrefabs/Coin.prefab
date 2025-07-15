@@ -172,7 +172,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1009893544885424166
@@ -289,6 +289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147ca6f48442449d9898df5e83c0e202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coinSprites:
+  - {fileID: 7988620104029095464, guid: d3c960f277e79704181a14e956e276dd, type: 3}
+  - {fileID: -6427819126223103574, guid: d3c960f277e79704181a14e956e276dd, type: 3}
+  - {fileID: -8141269676550098399, guid: d3c960f277e79704181a14e956e276dd, type: 3}
+  _coinIcon: {fileID: 7564650183176663902}
 --- !u!1 &8846492054802326397
 GameObject:
   m_ObjectHideFlags: 0

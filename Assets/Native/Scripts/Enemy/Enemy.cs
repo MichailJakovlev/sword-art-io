@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour, IScorable
 {
     private EnemyPool _enemyPool;
     private SpriteRenderer _spriteRenderer;
-    public SwordPool _swordPool;
     public GameObject _shadow;
     public TextMeshProUGUI _shadowText;
     public GameObject _nameUI;
@@ -25,7 +24,6 @@ public class Enemy : MonoBehaviour, IScorable
         _health = GetComponent<Health>();
         _enemyPool = GetComponentInParent<EnemyPool>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        _swordPool = GetComponentInChildren<SwordPool>();
     }
 
     public void Realize()
@@ -38,7 +36,6 @@ public class Enemy : MonoBehaviour, IScorable
         
         _spriteRenderer.enabled = false;
         _health._healthSlider.gameObject.SetActive(false);
-        _swordPool.RealizeAll();
         StartCoroutine(Timer());
     }
     

@@ -399,7 +399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c65e941416eac4ca6f30ad7da46039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swordPool: {fileID: 0}
   _shadow: {fileID: 2404117568602053811}
   _shadowText: {fileID: 215069883516971222}
   _nameUI: {fileID: 2802618479734850543}
@@ -417,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPosition: {x: 0, y: 0, z: 0}
-  _moveSpeed: 7
+  _moveSpeed: 6
 --- !u!114 &2919975053529640120
 MonoBehaviour:
   m_ObjectHideFlags: 0
