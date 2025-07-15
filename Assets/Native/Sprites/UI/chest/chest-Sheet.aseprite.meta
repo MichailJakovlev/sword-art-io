@@ -156,7 +156,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: db6cc6d3ad69e50428d1a273cb765e05
     spriteBone: []
     spriteOutline: []
@@ -174,10 +174,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 68
+      x: 64
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 1f03dad5d0d7375498a85e212d444072
     spriteBone: []
     spriteOutline: []
@@ -195,10 +195,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 132
+      x: 124
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 23ae0300eee78834d8446f2ea2185787
     spriteBone: []
     spriteOutline: []
@@ -216,10 +216,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 196
+      x: 184
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 2118d5dbbdb599344adf83ad420bd663
     spriteBone: []
     spriteOutline: []
@@ -237,10 +237,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 260
+      x: 244
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: d9577496c43426340b1333134320ed45
     spriteBone: []
     spriteOutline: []
@@ -258,10 +258,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 324
+      x: 304
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 273d7ee29c5d61544bb405680973b961
     spriteBone: []
     spriteOutline: []
@@ -279,10 +279,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 388
+      x: 364
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 1aa2734652ee00947a621c120b113f89
     spriteBone: []
     spriteOutline: []
@@ -300,10 +300,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 452
+      x: 424
       y: 4
       width: 59
-      height: 63
+      height: 70
     spriteID: 9c2a028f1ab0a0947b24b436d8d66cf2
     spriteBone: []
     spriteOutline: []
@@ -330,10 +330,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 512
-        height: 64
+        x: 1
+        y: 28
+        width: 479
+        height: 70
       spriteId: 7c90e417917ab4141a3e0b7043e1816b
     linkedCells: []
     parentIndex: -1
@@ -449,5 +449,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 512, y: 64}
-  previousTextureSize: {x: 1024, y: 128}
+  canvasSize: {x: 512, y: 99}
+  previousTextureSize: {x: 512, y: 128}

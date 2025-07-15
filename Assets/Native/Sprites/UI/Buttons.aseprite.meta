@@ -649,6 +649,111 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  - name: Buttons_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 30
+      width: 13
+      height: 11
+    spriteID: 4c65773d2fba8734a847d8a5a27af307
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Buttons_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 3, z: 2, w: 3}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 92
+      width: 19
+      height: 17
+    spriteID: d79a155e3e18e8a44a70aae033fd9335
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Buttons_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 3, z: 2, w: 3}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 92
+      width: 19
+      height: 17
+    spriteID: 1671069fca21dbe4eb1d292122bc58d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Buttons_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 3, z: 2, w: 3}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 74
+      width: 19
+      height: 17
+    spriteID: 72afb393ae226174f9a7871964d7d8df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Buttons_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 2, y: 2, z: 2, w: 2}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 22
+      width: 19
+      height: 17
+    spriteID: 8671a62828c36c145b24c09c94731faa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     uuid:
@@ -668,7 +773,7 @@ ScriptedImporter:
       cellRect:
         x: 2
         y: 20
-        width: 115
+        width: 119
         height: 105
       spriteId: effeabbb8904c7d429381c8313c8b357
     linkedCells: []

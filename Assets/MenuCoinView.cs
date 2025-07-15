@@ -6,7 +6,7 @@ public class MenuCoinView : MonoBehaviour
     [SerializeField] TextMeshProUGUI _coinText;
     [SerializeField] TextMeshProUGUI _coinShadowText;
     [SerializeField] private CaseScreeen _caseScreeen;
-    public void Awake()
+    public void OnEnable()
     {
         UpdateCoins();
     }

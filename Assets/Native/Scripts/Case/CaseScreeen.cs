@@ -16,6 +16,8 @@ public class CaseScreeen : MonoBehaviour
     
     [SerializeField] private GameObject sellSkinButton;
     [SerializeField] private GameObject inventoryButton;
+    
+    [SerializeField] private GameObject coins;
 
     public TextMeshProUGUI costSellText; 
     public TextMeshProUGUI costSellTextShadow; 
@@ -60,7 +62,8 @@ public class CaseScreeen : MonoBehaviour
         caseImageAlpha.alpha = 1;
         returnButton.SetActive(true);
         openCaseButton.SetActive(true);
-        adButton.SetActive(true);   
+        coins.SetActive(true);
+        adButton.SetActive(true);
         skinLot.SetActive(false);
         skinLotImage.transform.localScale = new Vector3(0f, 0f, 0f);
     }
@@ -68,6 +71,7 @@ public class CaseScreeen : MonoBehaviour
     public void HideUI()
     {
         returnButton.SetActive(false);
+        coins.SetActive(false);
         openCaseButton.SetActive(false);
         adButton.SetActive(false);
     }
