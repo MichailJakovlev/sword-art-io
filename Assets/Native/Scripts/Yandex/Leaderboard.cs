@@ -59,7 +59,12 @@ public class Leaderboard : MonoBehaviour, ILeaderboard
         {
             _isPlayerAuthed = false;
         }
-    }                   
+    }
+
+    public void ToMenu()
+    {
+        FindFirstObjectByType<UISwitcher>().LeaderboardToMenu();
+    }
   
     public void GetPlayers(string lbAnswer)
     {   
@@ -91,5 +96,6 @@ public class Leaderboard : MonoBehaviour, ILeaderboard
     public void AuthGetScore()
     {
         GetScoreLeaderboard();
+        FindFirstObjectByType<Authorization>().GameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 }
