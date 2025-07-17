@@ -20,7 +20,6 @@ public class CaseHandler : MonoBehaviour
     public void OpenCase()
     {
         if(PlayerPrefs.GetInt("Coins") >= 100) 
-        // if(PlayerPrefs.GetInt("Coins") >= 0) 
         {
             _caseOpener.CaseOpener.OpenCase();
             int currentCoins = PlayerPrefs.GetInt("Coins");

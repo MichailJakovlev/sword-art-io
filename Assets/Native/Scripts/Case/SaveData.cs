@@ -6,6 +6,8 @@ using Zenject;
 
 public class SaveData : MonoBehaviour, ISaveData
 {
+    [DllImport("__Internal")]
+    public static extern string GetLang();
     SaveData ISaveData.SaveData => this;
     private GameConfig _gameConfig;
     
@@ -27,6 +29,11 @@ public class SaveData : MonoBehaviour, ISaveData
     public class SkinData
     {
         public List<Skin> skins = new List<Skin>();
+    }
+
+    private void Start()
+    {
+        PlayerPrefs.SetString("currentLanguage", GetLang());
     }
     
     private void LoadSkinsData()

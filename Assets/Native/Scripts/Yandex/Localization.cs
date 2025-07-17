@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Localization : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    public static extern string GetLang();
+    // [DllImport("__Internal")]
+    // public static extern string GetLang();
 
     [SerializeField] private string _ru;
     [SerializeField] private string _en;
@@ -22,7 +22,7 @@ public class Localization : MonoBehaviour
 
     public void Start()
     {
-        _currentLanguage = GetLang();
+        _currentLanguage = PlayerPrefs.GetString("currentLanguage");
 
         // Russian
         if (_currentLanguage == "ru")
@@ -39,14 +39,12 @@ public class Localization : MonoBehaviour
         // Arabic
         else if (_currentLanguage == "ar")
         {
-            GetComponent<TextMeshProUGUI>().font = _arFont;
             GetComponent<TextMeshProUGUI>().text = _ar;
         }
 
         // Japanese
         else if (_currentLanguage == "ja")
         {
-            GetComponent<TextMeshProUGUI>().font = _jaFont;
             GetComponent<TextMeshProUGUI>().text = _ja;
         }
 

@@ -1881,8 +1881,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -187.41138}
-  m_SizeDelta: {x: 65.522, y: -195.293}
+  m_AnchoredPosition: {x: -0.6793976, y: -187.41138}
+  m_SizeDelta: {x: 143.8614, y: -195.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1121641118730543764
 CanvasRenderer:
@@ -1939,8 +1939,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4474,8 +4474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -194.1}
-  m_SizeDelta: {x: 65.522, y: -195.293}
+  m_AnchoredPosition: {x: -0.6793976, y: -194.1}
+  m_SizeDelta: {x: 143.8614, y: -195.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &80032823024198437
 CanvasRenderer:
@@ -4532,8 +4532,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11032,7 +11032,17 @@ MonoBehaviour:
   _defaultPlayerName: Player
   _inputPlayerName: {fileID: 5533748017816458448}
   _nameText: {fileID: 8345110095057067465}
+  _textAria: {fileID: 3321388903678084714}
   _textArea: {fileID: 6992579613389192122}
+  _ru: "\u0418\u0433\u0440\u043E\u043A"
+  _en: Player
+  _tr: Oyuncu
+  _ar: "\u0644\u0627\u0639\u0628"
+  _ja: "\u30D7\u30EC\u30A4\u30E4\u30FC"
+  _de: Spieler
+  _es: jugador
+  _arFont: {fileID: 11400000, guid: ddc64d9c3626ee7489c5e137eec0465c, type: 2}
+  _jaFont: {fileID: 11400000, guid: cfa5bbda215598141950da2d28308fe4, type: 2}
 --- !u!114 &5533748017816458448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11160,7 +11170,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_KeepTextSelectionVisible: 0
@@ -11631,8 +11641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.7, y: -201.6}
-  m_SizeDelta: {x: 65.522, y: -195.293}
+  m_AnchoredPosition: {x: 6.3794, y: -201.6}
+  m_SizeDelta: {x: 143.8614, y: -195.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6341932204002438897
 CanvasRenderer:
@@ -11689,8 +11699,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12859,8 +12869,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Type your name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 6669959761950095220, guid: 603f41529f9307143aaa9fa512f152f7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
+  m_sharedMaterial: {fileID: 6669959761950095220, guid: 5f66df9fd486bf94b9d1b7faa4df04a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

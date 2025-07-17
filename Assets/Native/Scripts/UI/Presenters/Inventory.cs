@@ -13,7 +13,6 @@ public class Inventory : MonoBehaviour, IInventory
     private GameConfig _gameConfig;
     private ISaveData _saveData;
 
-    // private RectTransform _gridInventory;
     private Image _skinImage;
     private Image _backgroundRarity;
     private List<SkinInfo> skinInfoCopy = new List<SkinInfo>();
