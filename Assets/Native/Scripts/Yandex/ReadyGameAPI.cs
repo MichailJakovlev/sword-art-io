@@ -30,6 +30,7 @@ public class ReadyGameAPI : MonoBehaviour, IReadyGameAPI
     public void Start()
     {
         ReadyGame();
+        StartGame(); 
     }
 
     public void ReadyGame()

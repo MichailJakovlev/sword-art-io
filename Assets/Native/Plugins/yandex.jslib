@@ -130,9 +130,9 @@ mergeInto(LibraryManager.library, {
     AuthingPlayer : function() {
       ysdk.auth.openAuthDialog().then(() => {
         // Игрок успешно авторизован.
-
-        console.log('Игрок не авторизован.');
+        console.log('Игрок успешно авторизован.');
         gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 1);
+        gameInstance.SendMessage('Leaderboard(Clone)','AuthGetScore');
         initPlayer().catch(err => {
           // Ошибка при инициализации объекта Player.
           console.log('Ошибка при инициализации объекта Player.');
@@ -140,7 +140,8 @@ mergeInto(LibraryManager.library, {
         });
         }).catch(() => {
           // Игрок не авторизован.
-          console.log('Игрок успешно авторизован.');
+          
+          console.log('Игрок не авторизован.');
           gameInstance.SendMessage('EventBus(Clone)', 'AuthPlayerEvent', 0);
         });
     },
